@@ -1,0 +1,6983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZERO FEAR | Fear Out. Freedom In.</title>
+
+<meta name="description" content="Zero Fear — beginner-first two-wheeler training and experience in Kolkata. Learn scooty and bike riding with structured training, real-road practice and doorstep training.">
+<meta name="keywords" content="Scooty Training Kolkata, Bike Training Kolkata, Two Wheeler Training Kolkata, Learn Scooty Kolkata, Scooty Training for Beginners, Doorstep Scooty Training Kolkata">
+<meta name="theme-color" content="#1557D6">
+
+<style>
+/* =========================================================
+   ZERO FEAR — SINGLE FILE WEBSITE
+   BLUE + YELLOW / LIGHT PREMIUM UI
+========================================================= */
+
+:root{
+  --blue:#1557D6;
+  --blue2:#0A3D99;
+  --blue3:#EAF2FF;
+  --yellow:#FFD522;
+  --yellow2:#FFF4A8;
+  --text:#10233F;
+  --muted:#68778D;
+  --bg:#F7F9FC;
+  --white:#fff;
+  --border:#E0E7F0;
+  --green:#159447;
+  --radius:26px;
+  --shadow:0 18px 55px rgba(21,87,214,.10);
+  --max:1200px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.55;
+  overflow-x:hidden;
+}
+
+body.no-scroll{
+  overflow:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input,
+textarea,
+select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+.container{
+  width:min(var(--max),92%);
+  margin:auto;
+}
+
+.hide{
+  display:none!important;
+}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.section{
+  padding:92px 0;
+}
+
+.section-label{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--yellow);
+  color:#101010;
+  border-radius:9px;
+  padding:7px 12px;
+  font-size:10px;
+  font-weight:1000;
+  letter-spacing:1.1px;
+  text-transform:uppercase;
+}
+
+.section-heading{
+  max-width:780px;
+  margin-bottom:38px;
+}
+
+.section-heading h2{
+  font-size:clamp(38px,5vw,64px);
+  line-height:.98;
+  letter-spacing:-3px;
+  margin:13px 0 16px;
+}
+
+.section-heading p{
+  color:var(--muted);
+  font-size:17px;
+  max-width:650px;
+}
+
+.center{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.center p{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:48px;
+  padding:13px 22px;
+  border-radius:999px;
+  background:var(--yellow);
+  color:#111;
+  border:1px solid var(--yellow);
+  font-weight:950;
+  transition:.22s ease;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 25px rgba(255,213,34,.25);
+}
+
+.btn-blue{
+  background:var(--blue);
+  border-color:var(--blue);
+  color:#fff;
+}
+
+.btn-white{
+  background:#fff;
+  border-color:#fff;
+  color:var(--blue);
+}
+
+.btn-outline{
+  background:transparent;
+  border-color:var(--border);
+}
+
+.muted{
+  color:var(--muted);
+}
+
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.grid-2{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.brand{
+  font-weight:1000;
+  font-size:24px;
+  line-height:1;
+  letter-spacing:-1.5px;
+}
+
+.brand span{
+  color:var(--blue);
+}
+
+.brand small{
+  display:block;
+  color:var(--muted);
+  font-size:8px;
+  letter-spacing:2px;
+  margin-top:5px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  font-size:13px;
+  font-weight:850;
+}
+
+.nav-links a:hover{
+  color:var(--blue);
+}
+
+.menu{
+  display:none;
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  background:#fff;
+  border:1px solid var(--border);
+  font-size:20px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  position:relative;
+  height:720px;
+  overflow:hidden;
+  background:#073478;
+  color:#fff;
+}
+
+.hero-slider,
+.hero-slide{
+  position:absolute;
+  inset:0;
+}
+
+.hero-slide{
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .7s ease;
+}
+
+.hero-slide.active{
+  opacity:1;
+  visibility:visible;
+}
+
+.hero-background{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 75% 20%,rgba(255,213,34,.20),transparent 27%),
+    radial-gradient(circle at 20% 90%,rgba(255,255,255,.08),transparent 30%),
+    linear-gradient(120deg,#061E48,#0A459F 70%,#146BE1);
+}
+
+.hero-background.alt{
+  background:
+    radial-gradient(circle at 80% 30%,rgba(255,213,34,.30),transparent 25%),
+    linear-gradient(120deg,#0A397D,#1262D4);
+}
+
+.hero-content{
+  position:relative;
+  z-index:4;
+  padding-top:112px;
+  max-width:720px;
+}
+
+.hero-badge{
+  display:inline-flex;
+  padding:8px 13px;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.2);
+  font-size:10px;
+  font-weight:950;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  font-size:clamp(47px,7vw,84px);
+  line-height:.93;
+  letter-spacing:-4px;
+  margin:20px 0;
+}
+
+.hero h1 span{
+  color:var(--yellow);
+}
+
+.hero p{
+  max-width:650px;
+  font-size:18px;
+  color:#E5EEFC;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:28px;
+}
+
+.hero-actions .outline{
+  background:transparent;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.45);
+}
+
+.hero-vehicle{
+  position:absolute;
+  right:4%;
+  bottom:6%;
+  width:min(520px,46vw);
+  z-index:3;
+  animation:vehicleMove 7s ease-in-out infinite;
+  filter:drop-shadow(0 25px 30px rgba(0,0,0,.30));
+}
+
+@keyframes vehicleMove{
+  0%,100%{transform:translateX(0) translateY(0)}
+  50%{transform:translateX(-25px) translateY(-5px)}
+}
+
+.hero-video{
+  position:absolute;
+  right:5%;
+  top:13%;
+  width:min(570px,47%);
+  aspect-ratio:16/9;
+  z-index:5;
+  border-radius:30px;
+  overflow:hidden;
+  background:#061A38;
+  border:1px solid rgba(255,255,255,.25);
+  box-shadow:0 30px 70px rgba(0,0,0,.25);
+}
+
+.hero-video iframe,
+.hero-video video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border:0;
+}
+
+.video-placeholder{
+  width:100%;
+  height:100%;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:25px;
+  color:#fff;
+  background:
+    linear-gradient(135deg,#0B2E67,#1557D6);
+}
+
+.video-placeholder strong{
+  color:var(--yellow);
+  font-size:20px;
+  display:block;
+  margin-bottom:8px;
+}
+
+.video-placeholder small{
+  color:#D8E7FF;
+}
+
+.hero-dots{
+  position:absolute;
+  z-index:10;
+  bottom:30px;
+  left:4%;
+  display:flex;
+  gap:7px;
+}
+
+.hero-dot{
+  width:34px;
+  height:5px;
+  border:0;
+  border-radius:20px;
+  background:rgba(255,255,255,.3);
+}
+
+.hero-dot.active{
+  background:var(--yellow);
+}
+
+/* =========================================================
+   TRUST STRIP
+========================================================= */
+
+.trust{
+  margin-top:-45px;
+  position:relative;
+  z-index:20;
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.trust-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:21px;
+  box-shadow:var(--shadow);
+}
+
+.trust-card strong{
+  display:block;
+  font-size:30px;
+  line-height:1;
+  letter-spacing:-1px;
+}
+
+.trust-card span{
+  color:var(--muted);
+  font-size:12px;
+  font-weight:800;
+}
+
+/* =========================================================
+   AI CHALLENGE
+========================================================= */
+
+.challenge-section{
+  padding-top:65px;
+}
+
+.challenge{
+  background:var(--blue);
+  color:#fff;
+  border-radius:34px;
+  padding:40px;
+  position:relative;
+  overflow:hidden;
+}
+
+.challenge:after{
+  content:"ZERO FEAR";
+  position:absolute;
+  right:-20px;
+  bottom:-60px;
+  color:rgba(255,255,255,.045);
+  font-size:130px;
+  font-weight:1000;
+  pointer-events:none;
+}
+
+.challenge-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  align-items:center;
+  position:relative;
+  z-index:2;
+}
+
+.challenge h2{
+  font-size:clamp(38px,5vw,62px);
+  line-height:.96;
+  letter-spacing:-3px;
+  margin:15px 0;
+}
+
+.challenge p{
+  color:#DCE9FF;
+  max-width:560px;
+}
+
+.quiz{
+  background:#fff;
+  color:var(--text);
+  padding:25px;
+  border-radius:25px;
+}
+
+.progress{
+  width:100%;
+  height:6px;
+  border-radius:20px;
+  background:#E6ECF4;
+  overflow:hidden;
+  margin-bottom:20px;
+}
+
+.progress span{
+  display:block;
+  height:100%;
+  background:var(--yellow);
+  transition:.3s;
+}
+
+.quiz h3{
+  font-size:20px;
+  line-height:1.3;
+  margin-bottom:17px;
+}
+
+.quiz h3 small{
+  display:block;
+  color:var(--muted);
+  font-size:12px;
+  margin-top:4px;
+}
+
+.quiz-options{
+  display:grid;
+  gap:9px;
+}
+
+.quiz-options button{
+  text-align:left;
+  border:1px solid var(--border);
+  background:#F8FAFD;
+  color:var(--text);
+  padding:13px 14px;
+  border-radius:13px;
+  font-weight:850;
+}
+
+.quiz-options button:hover{
+  background:var(--blue3);
+  border-color:var(--blue);
+}
+
+.quiz-count{
+  margin-top:14px;
+  color:var(--muted);
+  font-size:11px;
+}
+
+.quiz-result{
+  text-align:center;
+}
+
+.score{
+  color:var(--blue);
+  font-size:70px;
+  font-weight:1000;
+  line-height:1;
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.about-visual{
+  min-height:470px;
+  border-radius:34px;
+  overflow:hidden;
+  position:relative;
+  background:linear-gradient(135deg,#DCE9FF,#FFF0A1);
+  display:flex;
+  align-items:flex-end;
+  padding:28px;
+}
+
+.media-placeholder{
+  width:100%;
+  min-height:100%;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:30px;
+  color:var(--blue);
+  font-weight:1000;
+}
+
+.about-copy h2{
+  font-size:clamp(38px,5vw,62px);
+  line-height:.96;
+  letter-spacing:-3px;
+  margin:13px 0 18px;
+}
+
+.about-copy p{
+  color:var(--muted);
+  font-size:17px;
+}
+
+.about-points{
+  margin:25px 0;
+  display:grid;
+  gap:12px;
+}
+
+.point{
+  display:flex;
+  align-items:flex-start;
+  gap:11px;
+  font-weight:850;
+}
+
+.point-icon{
+  min-width:28px;
+  height:28px;
+  display:grid;
+  place-items:center;
+  border-radius:8px;
+  background:var(--yellow);
+  color:#111;
+  font-weight:1000;
+}
+
+/* =========================================================
+   MISSION
+========================================================= */
+
+.mission{
+  background:#fff;
+}
+
+.mission-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:20px;
+}
+
+.mission-main{
+  background:var(--blue);
+  color:#fff;
+  border-radius:30px;
+  padding:38px;
+  min-height:390px;
+}
+
+.mission-main h2{
+  font-size:clamp(38px,5vw,62px);
+  line-height:.96;
+  letter-spacing:-3px;
+  margin:15px 0;
+}
+
+.mission-main p{
+  color:#DCE9FF;
+  font-size:17px;
+  max-width:600px;
+}
+
+.mission-side{
+  display:grid;
+  gap:15px;
+}
+
+.mission-mini{
+  background:#F7FAFF;
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:24px;
+}
+
+.mission-mini strong{
+  font-size:20px;
+  display:block;
+  margin-bottom:5px;
+}
+
+.mission-mini p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+.journey-track{
+  display:flex;
+  gap:15px;
+  overflow-x:auto;
+  padding:5px 2px 15px;
+  scrollbar-width:thin;
+}
+
+.journey-card{
+  flex:0 0 260px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:25px;
+  padding:25px;
+}
+
+.journey-year{
+  color:var(--blue);
+  font-size:35px;
+  font-weight:1000;
+  letter-spacing:-2px;
+}
+
+.journey-card h3{
+  margin:7px 0;
+  font-size:20px;
+}
+
+.journey-card p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* =========================================================
+   WOMEN EMPOWERMENT
+========================================================= */
+
+.women{
+  background:#FFFDF0;
+}
+
+.women-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+  align-items:stretch;
+}
+
+.women-media{
+  min-height:520px;
+  border-radius:32px;
+  overflow:hidden;
+  position:relative;
+  background:linear-gradient(135deg,#CFE0FF,#FFE983);
+}
+
+.women-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.women-copy{
+  background:#fff;
+  border-radius:32px;
+  padding:40px;
+  border:1px solid var(--border);
+}
+
+.women-copy h2{
+  font-size:clamp(37px,5vw,60px);
+  line-height:.96;
+  letter-spacing:-3px;
+  margin:15px 0;
+}
+
+.women-copy p{
+  color:var(--muted);
+  font-size:16px;
+}
+
+.women-list{
+  display:grid;
+  gap:11px;
+  margin:25px 0;
+}
+
+.women-list div{
+  display:flex;
+  gap:10px;
+  font-weight:850;
+}
+
+.women-list b{
+  width:27px;
+  height:27px;
+  border-radius:8px;
+  background:var(--yellow);
+  display:grid;
+  place-items:center;
+}
+
+/* =========================================================
+   BOOSTED / STRUCTURED TRAINING
+========================================================= */
+
+.training-method{
+  background:#fff;
+}
+
+.method-box{
+  background:#F3F7FF;
+  border-radius:32px;
+  padding:34px;
+  overflow:hidden;
+}
+
+.method-steps{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:10px;
+  margin-top:30px;
+}
+
+.method-step{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:19px;
+  padding:20px 15px;
+  min-height:145px;
+  position:relative;
+}
+
+.method-step:before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:5px;
+  background:var(--yellow);
+  border-radius:20px 20px 0 0;
+}
+
+.method-step strong{
+  display:block;
+  color:var(--blue);
+  font-size:11px;
+  letter-spacing:1px;
+}
+
+.method-step h3{
+  margin:9px 0 5px;
+  font-size:17px;
+}
+
+.method-step p{
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* =========================================================
+   WHY CHOOSE
+========================================================= */
+
+.why-layout{
+  display:grid;
+  grid-template-columns:.75fr 1.25fr;
+  gap:35px;
+  align-items:start;
+}
+
+.why-intro{
+  position:sticky;
+  top:110px;
+}
+
+.why-intro h2{
+  font-size:clamp(38px,5vw,60px);
+  line-height:.96;
+  letter-spacing:-3px;
+  margin:15px 0;
+}
+
+.why-intro p{
+  color:var(--muted);
+}
+
+.why-items{
+  display:grid;
+  gap:12px;
+}
+
+.why-item{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:19px;
+  display:grid;
+  grid-template-columns:50px 1fr 24px;
+  gap:14px;
+  align-items:center;
+  transition:.22s;
+}
+
+.why-item:hover{
+  transform:translateX(5px);
+  border-color:#C7D8F5;
+  box-shadow:var(--shadow);
+}
+
+.why-square{
+  width:50px;
+  height:50px;
+  border-radius:13px;
+  background:var(--yellow);
+  display:grid;
+  place-items:center;
+  color:var(--blue);
+  font-weight:1000;
+  font-size:19px;
+}
+
+.why-item h3{
+  font-size:18px;
+}
+
+.why-item p{
+  color:var(--muted);
+  font-size:13px;
+  margin-top:2px;
+}
+
+.why-arrow{
+  color:var(--blue);
+  font-size:20px;
+  font-weight:1000;
+}
+
+/* =========================================================
+   COURSES
+========================================================= */
+
+.courses{
+  background:#fff;
+}
+
+.course-carousel{
+  display:flex;
+  gap:18px;
+  overflow-x:auto;
+  padding:5px 2px 18px;
+  scroll-snap-type:x mandatory;
+}
+
+.course-card{
+  flex:0 0 340px;
+  scroll-snap-align:start;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:0 12px 40px rgba(18,87,214,.06);
+}
+
+.course-image{
+  height:220px;
+  background:linear-gradient(135deg,#DCE9FF,#FFE980);
+  position:relative;
+  overflow:hidden;
+}
+
+.course-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.image-label{
+  position:absolute;
+  left:15px;
+  top:15px;
+  background:var(--yellow);
+  color:#111;
+  padding:7px 10px;
+  border-radius:9px;
+  font-size:10px;
+  font-weight:1000;
+}
+
+.course-body{
+  padding:24px;
+}
+
+.course-body h3{
+  font-size:23px;
+  line-height:1.1;
+}
+
+.course-body p{
+  color:var(--muted);
+  font-size:14px;
+  margin:9px 0 16px;
+}
+
+.course-meta{
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.meta{
+  padding:6px 9px;
+  background:var(--blue3);
+  color:var(--blue);
+  border-radius:999px;
+  font-size:10px;
+  font-weight:950;
+}
+
+/* =========================================================
+   DOORSTEP
+========================================================= */
+
+.doorstep{
+  background:var(--blue);
+  color:#fff;
+}
+
+.doorstep-grid{
+  display:grid;
+  grid-template-columns:1fr .9fr;
+  gap:35px;
+  align-items:center;
+}
+
+.doorstep h2{
+  font-size:clamp(40px,5vw,65px);
+  line-height:.95;
+  letter-spacing:-3px;
+  margin:15px 0;
+}
+
+.doorstep p{
+  color:#DCE9FF;
+  font-size:17px;
+}
+
+.doorstep-features{
+  display:grid;
+  gap:11px;
+  margin:25px 0;
+}
+
+.doorstep-features div{
+  display:flex;
+  gap:10px;
+  font-weight:850;
+}
+
+.doorstep-features b{
+  color:var(--yellow);
+}
+
+.calculator{
+  background:#fff;
+  color:var(--text);
+  border-radius:27px;
+  padding:27px;
+}
+
+.calculator h3{
+  font-size:23px;
+}
+
+.calculator p{
+  color:var(--muted);
+  font-size:13px;
+  margin:4px 0 18px;
+}
+
+.calculator label{
+  display:block;
+  font-size:12px;
+  font-weight:900;
+}
+
+.calculator input{
+  width:100%;
+  margin-top:7px;
+  padding:14px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  outline:none;
+}
+
+.distance-output{
+  margin-top:13px;
+  padding:18px;
+  border-radius:17px;
+  background:var(--blue);
+  color:#fff;
+}
+
+.distance-output span{
+  display:block;
+  font-size:11px;
+  color:#DCE9FF;
+}
+
+.distance-output strong{
+  display:block;
+  color:var(--yellow);
+  font-size:30px;
+}
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-filters{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding-bottom:8px;
+  margin-bottom:22px;
+}
+
+.filter{
+  flex:0 0 auto;
+  padding:9px 15px;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid var(--border);
+  font-size:12px;
+  font-weight:900;
+}
+
+.filter.active{
+  background:var(--yellow);
+  border-color:var(--yellow);
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:1.3fr .7fr .7fr;
+  grid-auto-rows:230px;
+  gap:13px;
+}
+
+.gallery-item{
+  position:relative;
+  border-radius:25px;
+  overflow:hidden;
+  background:linear-gradient(135deg,#DDE9FF,#FFE983);
+  border:1px solid var(--border);
+}
+
+.gallery-item.big{
+  grid-row:span 2;
+}
+
+.gallery-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.gallery-caption{
+  position:absolute;
+  left:12px;
+  bottom:12px;
+  background:rgba(255,255,255,.94);
+  padding:7px 10px;
+  border-radius:9px;
+  font-size:10px;
+  font-weight:950;
+}
+
+/* =========================================================
+   STORIES / REVIEWS
+========================================================= */
+
+.review-layout{
+  display:grid;
+  grid-template-columns:.7fr 1.3fr;
+  gap:18px;
+}
+
+.rating-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:28px;
+  padding:32px;
+}
+
+.stars{
+  font-size:27px;
+  letter-spacing:2px;
+}
+
+.rating-number{
+  font-size:68px;
+  line-height:1;
+  font-weight:1000;
+  color:var(--blue);
+  margin:7px 0;
+}
+
+.rating-card p{
+  color:var(--muted);
+}
+
+.testimonial{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:28px;
+  padding:32px;
+}
+
+.testimonial-quote{
+  font-size:25px;
+  line-height:1.2;
+  font-weight:850;
+  margin:10px 0 18px;
+}
+
+.testimonial-name{
+  color:var(--blue);
+  font-weight:950;
+}
+
+.review-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:22px;
+}
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.social{
+  background:#fff;
+}
+
+.social-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+}
+
+.social-card{
+  background:#F7FAFF;
+  border:1px solid var(--border);
+  border-radius:25px;
+  padding:28px;
+  transition:.2s;
+}
+
+.social-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+}
+
+.social-icon{
+  width:54px;
+  height:54px;
+  display:grid;
+  place-items:center;
+  background:var(--yellow);
+  color:var(--blue);
+  border-radius:16px;
+  font-size:20px;
+  font-weight:1000;
+}
+
+.social-card h3{
+  margin:15px 0 5px;
+  font-size:22px;
+}
+
+.social-card p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* =========================================================
+   BLOG
+========================================================= */
+
+.blog-list{
+  display:flex;
+  gap:17px;
+  overflow-x:auto;
+  padding:5px 2px 15px;
+}
+
+.blog-card{
+  flex:0 0 310px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:25px;
+  overflow:hidden;
+}
+
+.blog-image{
+  height:185px;
+  background:linear-gradient(135deg,#DCE9FF,#FFE983);
+  display:grid;
+  place-items:center;
+  color:var(--blue);
+  font-weight:1000;
+}
+
+.blog-body{
+  padding:21px;
+}
+
+.blog-date{
+  color:var(--blue);
+  font-size:10px;
+  font-weight:950;
+}
+
+.blog-body h3{
+  font-size:20px;
+  line-height:1.15;
+  margin:8px 0;
+}
+
+.blog-body p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-list{
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  gap:10px;
+}
+
+.faq-list details{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:19px 21px;
+}
+
+.faq-list summary{
+  cursor:pointer;
+  list-style:none;
+  font-weight:900;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.faq-list summary::-webkit-details-marker{
+  display:none;
+}
+
+.faq-list summary:after{
+  content:"+";
+  color:var(--blue);
+  font-size:20px;
+}
+
+.faq-list details[open] summary:after{
+  content:"−";
+}
+
+.faq-list p{
+  color:var(--muted);
+  margin-top:12px;
+}
+
+/* =========================================================
+   CONTACT / CTA
+========================================================= */
+
+.contact{
+  background:#F2F6FD;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:20px;
+}
+
+.contact-info{
+  background:var(--blue);
+  color:#fff;
+  border-radius:30px;
+  padding:35px;
+}
+
+.contact-info h2{
+  font-size:43px;
+  line-height:1;
+  letter-spacing:-2px;
+  margin:14px 0;
+}
+
+.contact-info p{
+  color:#DCE9FF;
+}
+
+.contact-list{
+  display:grid;
+  gap:15px;
+  margin-top:28px;
+}
+
+.contact-list div{
+  padding-bottom:13px;
+  border-bottom:1px solid rgba(255,255,255,.16);
+}
+
+.contact-list span{
+  display:block;
+  color:#BFD5F8;
+  font-size:11px;
+}
+
+.contact-list strong{
+  font-size:17px;
+}
+
+.contact-form{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:30px;
+  padding:30px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
+
+.form-field{
+  margin-bottom:13px;
+}
+
+.form-field.full{
+  grid-column:1/-1;
+}
+
+.form-field label{
+  display:block;
+  font-size:11px;
+  font-weight:950;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea{
+  width:100%;
+  margin-top:6px;
+  padding:13px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  outline:none;
+  background:#fff;
+}
+
+.form-field textarea{
+  resize:vertical;
+}
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final{
+  padding:85px 0;
+}
+
+.final-box{
+  background:var(--yellow);
+  border-radius:35px;
+  padding:60px 25px;
+  text-align:center;
+}
+
+.final-box h2{
+  font-size:clamp(40px,6vw,70px);
+  line-height:.95;
+  letter-spacing:-4px;
+}
+
+.final-box p{
+  margin:13px 0 23px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  background:#fff;
+  border-top:1px solid var(--border);
+  padding:55px 0 105px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:30px;
+}
+
+.footer-title{
+  font-weight:950;
+  margin-bottom:12px;
+}
+
+.footer-grid a{
+  display:block;
+  color:var(--muted);
+  font-size:13px;
+  margin:8px 0;
+}
+
+.footer-description{
+  color:var(--muted);
+  max-width:330px;
+  margin-top:15px;
+  font-size:13px;
+}
+
+.copyright{
+  border-top:1px solid var(--border);
+  padding-top:18px;
+  margin-top:35px;
+  color:var(--muted);
+  font-size:11px;
+}
+
+/* =========================================================
+   MOBILE CTA
+========================================================= */
+
+.mobile-bar{
+  display:none;
+  position:fixed;
+  z-index:2000;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:7px;
+  background:#fff;
+  border-top:1px solid var(--border);
+  grid-template-columns:1fr 1fr 1.2fr;
+  gap:6px;
+}
+
+.mobile-bar a{
+  text-align:center;
+  padding:11px 5px;
+  border-radius:11px;
+  font-size:11px;
+  font-weight:950;
+}
+
+.mobile-call{
+  background:#EAF2FF;
+  color:var(--blue);
+}
+
+.mobile-wa{
+  background:#E9FFF0;
+  color:#08753A;
+}
+
+.mobile-book{
+  background:var(--yellow);
+}
+
+/* =========================================================
+   INNER PAGE OVERLAY
+========================================================= */
+
+.page{
+  display:none;
+  min-height:75vh;
+  background:var(--bg);
+}
+
+.page.active{
+  display:block;
+}
+
+.inner-top{
+  padding:70px 0 35px;
+}
+
+.breadcrumb{
+  color:var(--muted);
+  font-size:12px;
+  font-weight:800;
+}
+
+.inner-top h1{
+  font-size:clamp(45px,6vw,75px);
+  line-height:.95;
+  letter-spacing:-4px;
+  margin:13px 0;
+}
+
+.inner-top p{
+  color:var(--muted);
+  max-width:720px;
+  font-size:17px;
+}
+
+.detail-content{
+  max-width:900px;
+}
+
+.detail-content h2{
+  font-size:33px;
+  line-height:1;
+  margin:35px 0 12px;
+}
+
+.detail-content p,
+.detail-content li{
+  color:var(--muted);
+}
+
+.detail-content ul,
+.detail-content ol{
+  padding-left:22px;
+  margin:15px 0;
+}
+
+.detail-content li{
+  margin:7px 0;
+}
+
+/* =========================================================
+   ADMIN
+========================================================= */
+
+.admin{
+  background:#081F43;
+  color:#fff;
+  border-radius:32px;
+  padding:28px;
+}
+
+.admin-grid{
+  display:grid;
+  grid-template-columns:210px 1fr;
+  gap:20px;
+}
+
+.admin-nav button{
+  width:100%;
+  padding:12px;
+  margin-bottom:5px;
+  border:0;
+  border-radius:10px;
+  background:transparent;
+  color:#BFD1ED;
+  text-align:left;
+}
+
+.admin-nav button:hover{
+  background:#123664;
+  color:#fff;
+}
+
+.admin-panel{
+  background:#fff;
+  color:var(--text);
+  border-radius:22px;
+  padding:25px;
+}
+
+.admin-fields{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
+
+.admin-fields label{
+  font-size:11px;
+  font-weight:950;
+}
+
+.admin-fields input,
+.admin-fields textarea,
+.admin-fields select{
+  width:100%;
+  margin-top:5px;
+  padding:11px;
+  border:1px solid var(--border);
+  border-radius:9px;
+}
+
+.admin-note{
+  background:#FFF7C7;
+  color:#594900;
+  padding:13px;
+  border-radius:12px;
+  margin-bottom:18px;
+  font-size:12px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:950px){
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:72px;
+    left:4%;
+    right:4%;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:17px;
+    flex-direction:column;
+    align-items:flex-start;
+    box-shadow:var(--shadow);
+  }
+
+  .nav-links.open{
+    display:flex;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .nav>.btn{
+    display:none;
+  }
+
+  .hero{
+    height:730px;
+  }
+
+  .hero-content{
+    padding-top:80px;
+  }
+
+  .hero-vehicle{
+    width:70%;
+    right:0;
+    bottom:5%;
+  }
+
+  .hero-video{
+    width:90%;
+    right:5%;
+    top:auto;
+    bottom:12%;
+  }
+
+  .trust-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .challenge-grid,
+  .about-grid,
+  .mission-grid,
+  .women-grid,
+  .doorstep-grid,
+  .review-layout,
+  .contact-grid,
+  .why-layout{
+    grid-template-columns:1fr;
+  }
+
+  .why-intro{
+    position:static;
+  }
+
+  .method-steps{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .social-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .admin-grid{
+    grid-template-columns:1fr;
+  }
+
+  .mobile-bar{
+    display:grid;
+  }
+}
+
+@media(max-width:620px){
+
+  .section{
+    padding:64px 0;
+  }
+
+  .hero{
+    height:735px;
+  }
+
+  .hero h1{
+    font-size:45px;
+    letter-spacing:-2.5px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .hero-content{
+    padding-top:62px;
+  }
+
+  .hero-vehicle{
+    width:87%;
+  }
+
+  .hero-video{
+    bottom:12%;
+  }
+
+  .trust{
+    margin-top:-28px;
+  }
+
+  .trust-card{
+    padding:16px;
+  }
+
+  .trust-card strong{
+    font-size:23px;
+  }
+
+  .challenge{
+    padding:21px;
+    border-radius:25px;
+  }
+
+  .challenge h2{
+    font-size:40px;
+  }
+
+  .about-visual{
+    min-height:300px;
+  }
+
+  .women-media{
+    min-height:330px;
+  }
+
+  .women-copy{
+    padding:25px;
+  }
+
+  .method-box{
+    padding:20px;
+  }
+
+  .method-steps{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .method-step{
+    min-height:125px;
+  }
+
+  .course-card{
+    flex-basis:300px;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr 1fr;
+    grid-auto-rows:160px;
+  }
+
+  .gallery-item.big{
+    grid-row:span 2;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .form-field.full{
+    grid-column:auto;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .admin-fields{
+    grid-template-columns:1fr;
+  }
+}
+
+/* =========================================================
+   ZERO FEAR V3 — SCREENSHOT-BASED VISUAL REDESIGN
+   Light / Blue / Yellow / compact / Bengali-friendly
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --blue:#1457D9;
+  --blue2:#0C3E9C;
+  --blue3:#EEF5FF;
+  --yellow:#FFD522;
+  --yellow2:#FFF3A3;
+  --text:#12243D;
+  --muted:#718096;
+  --bg:#F7F9FD;
+  --white:#FFFFFF;
+  --border:#DCE4EF;
+  --green:#1457D9;
+  --radius:24px;
+  --shadow:0 18px 60px rgba(18,54,110,.09);
+  --max:1220px;
+}
+
+html,body{
+  font-family:"Manrope","Noto Sans Bengali",system-ui,sans-serif;
+}
+
+body{
+  background:#F8FAFD;
+}
+
+body *{
+  text-rendering:optimizeLegibility;
+}
+
+.section{
+  padding:76px 0;
+}
+
+.section-heading h2,
+.about-copy h2,
+.mission-main h2,
+.why-intro h2,
+.doorstep h2,
+.testimonial-quote{
+  font-family:"Manrope","Noto Sans Bengali",sans-serif;
+  letter-spacing:-2.6px;
+}
+
+.section-heading h2{
+  font-size:clamp(36px,5vw,62px);
+  line-height:1.02;
+}
+
+.section-heading p{
+  font-size:18px;
+  line-height:1.65;
+}
+
+.section-label{
+  border-radius:999px;
+  padding:9px 15px;
+  font-size:10px;
+  letter-spacing:1.5px;
+}
+
+.btn{
+  min-height:50px;
+  padding:14px 24px;
+  font-size:14px;
+  box-shadow:none;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+/* ---------- ABOUT: compact editorial split ---------- */
+#about{
+  background:#fff;
+}
+
+#about .about-grid{
+  grid-template-columns:1.05fr .95fr;
+  gap:54px;
+  align-items:center;
+}
+
+#about .about-visual{
+  order:2;
+}
+
+#about .about-copy{
+  order:1;
+}
+
+#about .about-visual .media-placeholder{
+  min-height:430px;
+  border:0;
+  border-radius:34px;
+  background:
+    radial-gradient(circle at 70% 20%, rgba(255,213,34,.95), transparent 22%),
+    linear-gradient(145deg,#1457D9 0%,#2A70EA 58%,#EEF5FF 58%,#EEF5FF 100%);
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-end;
+  padding:30px;
+  font-size:0;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  position:relative;
+}
+
+#about .about-visual .media-placeholder:before{
+  content:"ZERO FEAR";
+  font-size:42px;
+  font-weight:800;
+  letter-spacing:-2px;
+}
+
+#about .about-visual .media-placeholder:after{
+  content:"Real learner journeys • Training • Confidence";
+  font-size:14px;
+  margin-top:8px;
+  opacity:.9;
+}
+
+#about .about-copy h2{
+  font-size:clamp(42px,5vw,68px);
+  line-height:.98;
+  margin:16px 0;
+}
+
+#about .about-copy > p{
+  max-width:760px;
+  font-size:19px;
+  line-height:1.75;
+}
+
+#about .about-points{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px 20px;
+  margin:26px 0 30px;
+}
+
+#about .point{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  font-weight:750;
+  font-size:14px;
+}
+
+#about .point-icon{
+  flex:0 0 28px;
+  width:28px;
+  height:28px;
+  border-radius:9px;
+  display:grid;
+  place-items:center;
+  background:var(--yellow);
+  color:#111;
+  font-weight:1000;
+}
+
+/* small advertising-style accent */
+#about .about-copy:before{
+  content:"LEARN • EXPERIENCE • RIDE";
+  display:inline-flex;
+  padding:8px 12px;
+  border-radius:999px;
+  background:#EEF5FF;
+  color:var(--blue);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.5px;
+}
+
+/* ---------- MISSION: light premium blue, not full solid blue ---------- */
+#mission{
+  background:#F7F9FD;
+}
+
+#mission .section-heading{
+  max-width:1040px;
+  margin-bottom:28px;
+}
+
+#mission .section-heading h2{
+  font-size:clamp(48px,6vw,78px);
+  margin-top:17px;
+}
+
+#mission .section-heading p{
+  font-size:20px;
+  max-width:930px;
+}
+
+#mission .mission-grid{
+  grid-template-columns:1.15fr .85fr;
+  gap:18px;
+  align-items:stretch;
+}
+
+#mission .mission-main{
+  background:linear-gradient(135deg,#EAF2FF,#F7FBFF);
+  border:1px solid #D3E2F8;
+  color:var(--text);
+  border-radius:32px;
+  padding:40px;
+  min-height:330px;
+  box-shadow:var(--shadow);
+}
+
+#mission .mission-main h2{
+  color:var(--blue);
+  font-size:clamp(38px,4.5vw,58px);
+  margin:16px 0 10px;
+}
+
+#mission .mission-main p{
+  color:#51657E;
+  max-width:720px;
+  font-size:17px;
+}
+
+#mission .mission-main .btn{
+  margin-top:20px;
+}
+
+#mission .mission-side{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+#mission .mission-mini{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:22px;
+  min-height:0;
+  box-shadow:0 10px 30px rgba(18,54,110,.045);
+}
+
+#mission .mission-mini strong{
+  font-size:20px;
+}
+
+#mission .mission-mini p{
+  color:var(--muted);
+  font-size:13px;
+  margin-top:5px;
+}
+
+/* ---------- LEARN / PRACTICE / EXPERIENCE / FREEDOM ---------- */
+#mission .mission-side:before{
+  content:"";
+}
+
+#mission .mission-mini{
+  transition:transform .22s ease, border-color .22s ease;
+}
+
+#mission .mission-mini:hover{
+  transform:translateY(-3px);
+  border-color:#B9D0F6;
+}
+
+/* ---------- JOURNEY: compact horizontal timeline ---------- */
+#journey{
+  background:#F7F9FD;
+}
+
+#journey .section-heading{
+  max-width:1000px;
+}
+
+#journey .section-heading h2{
+  font-size:clamp(42px,5.5vw,70px);
+}
+
+#journey .journey-track{
+  display:flex;
+  gap:16px;
+  overflow-x:auto;
+  padding:8px 2px 18px;
+  scroll-snap-type:x mandatory;
+}
+
+#journey .journey-track:before{
+  content:"";
+}
+
+#journey .journey-card{
+  flex:0 0 270px;
+  min-height:235px;
+  scroll-snap-align:start;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:25px;
+  padding:26px;
+  box-shadow:0 10px 30px rgba(18,54,110,.04);
+  position:relative;
+  overflow:hidden;
+}
+
+#journey .journey-card:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:5px;
+  background:var(--yellow);
+}
+
+#journey .journey-year{
+  color:var(--blue);
+  font-size:48px;
+  font-weight:800;
+  letter-spacing:-2px;
+  line-height:1;
+  margin-bottom:24px;
+}
+
+#journey .journey-card h3{
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+#journey .journey-card p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.55;
+}
+
+/* ---------- BUILT AROUND LEARNER: compact grid instead of 7 tall rows ---------- */
+#why{
+  background:#fff;
+}
+
+#why .why-layout{
+  display:grid;
+  grid-template-columns:.75fr 1.25fr;
+  gap:30px;
+  align-items:start;
+}
+
+#why .why-intro{
+  position:sticky;
+  top:105px;
+}
+
+#why .why-intro h2{
+  font-size:clamp(44px,5vw,68px);
+  line-height:.98;
+  margin:16px 0;
+}
+
+#why .why-intro p{
+  font-size:17px;
+  line-height:1.7;
+  color:var(--muted);
+  max-width:430px;
+}
+
+#why .why-items{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+#why .why-item{
+  min-height:150px;
+  padding:20px;
+  border:1px solid var(--border);
+  border-radius:22px;
+  background:#F8FAFE;
+  display:grid;
+  grid-template-columns:46px 1fr 18px;
+  gap:12px;
+  align-items:start;
+  transition:.22s ease;
+}
+
+#why .why-item:hover{
+  background:#fff;
+  border-color:#BCD1F3;
+  transform:translateY(-2px);
+  box-shadow:var(--shadow);
+}
+
+#why .why-square{
+  width:44px;
+  height:44px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  background:var(--yellow);
+  color:var(--blue);
+  font-weight:900;
+}
+
+#why .why-item h3{
+  font-size:17px;
+  line-height:1.25;
+}
+
+#why .why-item p{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:6px;
+  line-height:1.55;
+}
+
+#why .why-arrow{
+  color:var(--blue);
+  font-size:18px;
+  font-weight:900;
+}
+
+/* ---------- DOORSTEP: important but no giant blue block ---------- */
+#doorstep{
+  background:#fff;
+}
+
+#doorstep .doorstep-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:22px;
+  align-items:stretch;
+}
+
+#doorstep .doorstep-grid > div:first-child{
+  background:linear-gradient(135deg,#EAF2FF,#F8FBFF);
+  border:1px solid #D7E4F7;
+  border-radius:32px;
+  padding:42px;
+  box-shadow:var(--shadow);
+  position:relative;
+  overflow:hidden;
+}
+
+#doorstep .doorstep-grid > div:first-child:after{
+  content:"UP TO 10 KM";
+  position:absolute;
+  right:26px;
+  top:26px;
+  background:var(--yellow);
+  color:#111;
+  padding:9px 13px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+#doorstep h2{
+  font-size:clamp(45px,5.5vw,72px);
+  margin:15px 0 8px;
+}
+
+#doorstep .doorstep-grid > div:first-child > p{
+  font-size:18px;
+  color:#566A82;
+  max-width:650px;
+}
+
+#doorstep .doorstep-features{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px 18px;
+  margin:26px 0;
+}
+
+#doorstep .doorstep-features > div{
+  font-size:14px;
+  font-weight:750;
+}
+
+#doorstep .doorstep-features b{
+  color:var(--blue);
+  margin-right:7px;
+}
+
+#doorstep .calculator{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:32px;
+  padding:34px;
+  box-shadow:0 12px 36px rgba(18,54,110,.06);
+}
+
+#doorstep .calculator h3{
+  font-size:27px;
+  letter-spacing:-1px;
+}
+
+#doorstep .calculator p{
+  color:var(--muted);
+  font-size:14px;
+  margin:5px 0 20px;
+}
+
+#doorstep .calculator input{
+  border:1px solid #CBD7E7;
+  border-radius:14px;
+  min-height:50px;
+}
+
+#doorstep .distance-output{
+  background:#F4F8FF;
+  border:1px solid #DCE8FA;
+  border-radius:18px;
+  padding:18px;
+  margin-top:14px;
+}
+
+#doorstep .distance-output strong{
+  color:var(--blue);
+}
+
+/* ---------- REVIEWS: remove developer-looking placeholder feeling ---------- */
+#reviews{
+  background:#F7F9FD;
+}
+
+#reviews .section-heading h2{
+  font-size:clamp(44px,5.5vw,70px);
+}
+
+#reviews .review-layout{
+  grid-template-columns:.72fr 1.28fr;
+  gap:16px;
+}
+
+#reviews .rating-card,
+#reviews .testimonial{
+  border-radius:28px;
+  box-shadow:0 12px 35px rgba(18,54,110,.05);
+}
+
+#reviews .rating-card{
+  padding:34px;
+  background:#fff;
+}
+
+#reviews .testimonial{
+  padding:36px;
+  background:linear-gradient(135deg,#fff,#F8FBFF);
+}
+
+#reviews .testimonial-quote{
+  font-size:clamp(24px,3vw,34px);
+  line-height:1.22;
+  margin:18px 0;
+}
+
+#reviews .testimonial .muted{
+  max-width:700px;
+  font-size:13px;
+}
+
+#reviews .testimonial .muted{
+  font-size:0;
+}
+
+#reviews .testimonial .muted:after{
+  content:"Real learner stories, Google feedback and video testimonials can be connected here from the Admin Panel.";
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* ---------- SOCIAL: clean three-card row ---------- */
+#social{
+  background:#fff;
+}
+
+#social .social-grid{
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+#social .social-card{
+  min-height:250px;
+  border-radius:24px;
+  padding:26px;
+  background:#F6F9FE;
+  border:1px solid #DDE6F2;
+}
+
+#social .social-icon{
+  width:50px;
+  height:50px;
+  border-radius:14px;
+}
+
+#social .social-card h3{
+  font-size:22px;
+}
+
+#social .social-card p{
+  font-size:13px;
+  line-height:1.6;
+}
+
+/* ---------- training method: compact strip ---------- */
+#training-method{
+  background:#fff;
+}
+
+#training-method .method-box{
+  background:#F4F8FF;
+  border:1px solid #DCE7F6;
+  border-radius:28px;
+  padding:18px;
+}
+
+#training-method .method-steps{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:8px;
+}
+
+#training-method .method-step{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:17px;
+  min-height:150px;
+}
+
+#training-method .method-step strong{
+  color:var(--blue);
+  font-size:12px;
+}
+
+#training-method .method-step h3{
+  font-size:17px;
+  margin:8px 0 5px;
+}
+
+#training-method .method-step p{
+  color:var(--muted);
+  font-size:11px;
+}
+
+/* ---------- Women: cleaner editorial block ---------- */
+#women{
+  background:#F7F9FD;
+}
+
+#women .women-grid{
+  align-items:center;
+  gap:42px;
+}
+
+#women .women-media .media-placeholder{
+  min-height:420px;
+  border-radius:30px;
+  border:0;
+  background:
+    linear-gradient(145deg,#1457D9 0%,#2D73EA 56%,#EEF5FF 56%);
+  color:#fff;
+  display:flex;
+  align-items:flex-end;
+  padding:30px;
+  font-size:0;
+  box-shadow:var(--shadow);
+}
+
+#women .women-media .media-placeholder:after{
+  content:"REAL RIDER STORY";
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+#women .women-copy h2{
+  font-size:clamp(42px,5vw,64px);
+  line-height:1;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width:900px){
+  .section{padding:58px 0;}
+
+  #about .about-grid,
+  #mission .mission-grid,
+  #why .why-layout,
+  #doorstep .doorstep-grid{
+    grid-template-columns:1fr;
+  }
+
+  #about .about-visual{order:1;}
+  #about .about-copy{order:2;}
+
+  #about .about-visual .media-placeholder{
+    min-height:300px;
+  }
+
+  #about .about-points{
+    grid-template-columns:1fr;
+  }
+
+  #mission .mission-main{
+    min-height:0;
+    padding:28px;
+  }
+
+  #mission .mission-side{
+    grid-template-columns:1fr 1fr;
+  }
+
+  #why .why-intro{
+    position:static;
+  }
+
+  #why .why-items{
+    grid-template-columns:1fr;
+  }
+
+  #doorstep .doorstep-grid > div:first-child{
+    padding:30px;
+  }
+
+  #doorstep .doorstep-features{
+    grid-template-columns:1fr;
+  }
+
+  #reviews .review-layout{
+    grid-template-columns:1fr;
+  }
+
+  #social .social-grid{
+    grid-template-columns:1fr;
+  }
+
+  #training-method .method-steps{
+    display:flex;
+    overflow-x:auto;
+    gap:9px;
+  }
+
+  #training-method .method-step{
+    flex:0 0 155px;
+  }
+}
+
+@media (max-width:560px){
+  .section-heading h2{
+    letter-spacing:-1.8px;
+  }
+
+  #mission .mission-side{
+    grid-template-columns:1fr;
+  }
+
+  #mission .mission-main h2{
+    font-size:40px;
+  }
+
+  #journey .journey-card{
+    flex-basis:250px;
+  }
+
+  #reviews .rating-number{
+    font-size:58px;
+  }
+
+  #reviews .testimonial-quote{
+    font-size:24px;
+  }
+}
+
+/* Prevent public admin route from being exposed */
+#admin{
+  display:none!important;
+}
+
+
+/* =========================================================
+   ZERO FEAR V4 — REAL INNER PAGES
+========================================================= */
+.inner-hero{padding:92px 0 76px;background:#fff;border-bottom:1px solid var(--border)}
+.inner-hero.light-blue{background:linear-gradient(135deg,#EEF5FF,#F9FBFF)}
+.inner-hero.yellow-blue{background:linear-gradient(135deg,#1457D9 0%,#1457D9 68%,#FFD522 68%,#FFD522 100%);color:#fff}
+.inner-hero .container{max-width:1220px}
+.inner-hero h1{font-size:clamp(50px,7vw,88px);line-height:.94;letter-spacing:-4px;margin:18px 0}
+.inner-hero h1 span{color:var(--blue)}
+.inner-hero.yellow-blue h1 span{color:var(--yellow)}
+.inner-hero p{max-width:820px;font-size:19px;line-height:1.7;color:var(--muted)}
+.inner-hero.yellow-blue p{color:#DDEAFF}
+.inner-actions{display:flex;gap:10px;margin-top:25px;flex-wrap:wrap}
+.page-block{padding:72px 0}
+.page-intro{max-width:850px;margin-bottom:28px}
+.page-intro h2{font-size:clamp(38px,5vw,64px);line-height:1;letter-spacing:-2.5px;margin:15px 0}
+.page-intro p{font-size:17px;color:var(--muted);line-height:1.7}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.process-grid article,.step-grid article,.content-grid-v4 article{background:#fff;border:1px solid var(--border);border-radius:23px;padding:25px;min-height:190px;box-shadow:0 10px 35px rgba(18,54,110,.045)}
+.process-grid b{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--yellow);color:var(--blue);font-weight:900}
+.process-grid h3,.step-grid h3,.content-grid-v4 h3{font-size:20px;margin:22px 0 7px}
+.process-grid p,.step-grid p,.content-grid-v4 p{font-size:13px;color:var(--muted);line-height:1.6}
+.soft-panel{background:#F7F9FD;max-width:none}
+.large-link-grid{display:grid;gap:10px;margin-top:30px}
+.large-link-grid a{display:grid;grid-template-columns:58px 1fr 30px;gap:16px;align-items:center;background:#fff;border:1px solid var(--border);border-radius:22px;padding:18px 22px;color:var(--text);text-decoration:none;transition:.2s}
+.large-link-grid a:hover{transform:translateY(-2px);border-color:#BBD0F1;box-shadow:var(--shadow)}
+.large-link-grid a>span{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--yellow);color:var(--blue);font-weight:900}
+.large-link-grid h3{margin:0;font-size:19px}.large-link-grid p{margin:4px 0 0;color:var(--muted);font-size:13px}.large-link-grid strong{color:var(--blue);font-size:20px}
+.cta-strip{display:flex;justify-content:space-between;align-items:center;gap:25px;background:linear-gradient(135deg,#EEF5FF,#F9FBFF);border:1px solid #D6E4F7;border-radius:28px;padding:30px 34px}
+.cta-strip small,.story-banner small{font-weight:900;letter-spacing:1.4px;color:var(--blue)}
+.cta-strip h2{font-size:34px;letter-spacing:-1.5px;margin:8px 0}.cta-strip p{color:var(--muted);margin:0}
+.step-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.step-grid article span{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--yellow);color:var(--blue);font-weight:900}
+.two-col-info{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.info-card{border:1px solid var(--border);border-radius:28px;padding:32px;background:#fff;box-shadow:0 10px 35px rgba(18,54,110,.04)}
+.info-card h2{font-size:36px;letter-spacing:-1.5px;margin:15px 0 8px}.info-card p{color:var(--muted);line-height:1.65}
+.calculator-large{border:1px solid #D4E2F6;border-radius:30px;padding:34px;background:#F4F8FF;max-width:760px}
+.calculator-large h2{font-size:42px;letter-spacing:-2px;margin:14px 0 6px}.calculator-large p{color:var(--muted)}.calculator-large input{width:100%;box-sizing:border-box;border:1px solid #CBD7E7;border-radius:14px;min-height:56px;padding:0 16px;margin:15px 0;font-size:16px}
+.fee-result{background:#fff;border:1px solid #DCE7F6;border-radius:17px;padding:17px;margin-bottom:18px;color:var(--blue);font-weight:800}
+.ecosystem-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.ecosystem-grid article{background:#fff;border:1px solid var(--border);border-radius:22px;padding:23px;min-height:200px}.ecosystem-grid b{font-size:11px;color:var(--blue);letter-spacing:1.2px}.ecosystem-grid h3{font-size:19px;margin:20px 0 7px}.ecosystem-grid p{color:var(--muted);font-size:13px;line-height:1.6}
+.story-banner{border-radius:30px;background:var(--blue);color:#fff;padding:42px}.story-banner h2{font-size:clamp(32px,4.5vw,54px);line-height:1.05;letter-spacing:-2px;max-width:950px;margin:14px 0 25px}.story-banner .btn{background:var(--yellow);color:#111}
+.timeline-v4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative}.timeline-v4:before{content:"";position:absolute;left:8%;right:8%;top:36px;height:2px;background:#C9D8ED}.timeline-v4 article{position:relative;background:#fff;border:1px solid var(--border);border-radius:24px;padding:28px;min-height:220px}.timeline-v4 span{position:relative;z-index:1;display:inline-flex;background:var(--yellow);border-radius:999px;padding:8px 12px;color:var(--blue);font-weight:900}.timeline-v4 h3{font-size:22px;margin:28px 0 8px}.timeline-v4 p{color:var(--muted);font-size:13px;line-height:1.6}
+.quote-panel{background:#fff;border:1px solid var(--border);border-radius:30px;padding:36px;max-width:900px}.quote-panel blockquote{font-size:clamp(25px,3.5vw,42px);line-height:1.2;letter-spacing:-1.5px;margin:18px 0}.quote-panel p{color:var(--muted);font-size:13px}
+.platform-grid-v4{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.platform-grid-v4 a{min-height:250px;background:#fff;border:1px solid var(--border);border-radius:26px;padding:30px;color:var(--text);text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;transition:.2s}.platform-grid-v4 a:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#BCD0F0}.platform-grid-v4 small,.article-grid-v4 small,.content-grid-v4 small{color:var(--blue);font-weight:900;letter-spacing:1.2px}.platform-grid-v4 h2{font-size:32px;letter-spacing:-1.5px;margin:15px 0 6px}.platform-grid-v4 p{color:var(--muted)}.platform-grid-v4 strong{color:var(--blue)}
+.content-grid-v4{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.content-grid-v4 article{min-height:170px}.article-grid-v4{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.article-grid-v4 a{background:#fff;border:1px solid var(--border);border-radius:26px;padding:28px;color:var(--text);text-decoration:none;min-height:280px;display:flex;flex-direction:column}.article-grid-v4 h2{font-size:25px;line-height:1.08;letter-spacing:-1px;margin:20px 0 10px}.article-grid-v4 p{color:var(--muted);line-height:1.6}.article-grid-v4 strong{color:var(--blue);margin-top:auto}
+.contact-v4 .contact-options{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.contact-options a{display:block;text-decoration:none;color:var(--text);border:1px solid var(--border);background:#fff;border-radius:25px;padding:28px;min-height:190px}.contact-options small{color:var(--blue);font-weight:900;letter-spacing:1.2px}.contact-options h2{font-size:27px;margin:20px 0 6px}.contact-options p{color:var(--muted)}.form-card{background:#F7F9FD;border:1px solid var(--border);border-radius:28px;padding:34px}.form-card h2{font-size:40px;margin:12px 0 7px}.form-card p{color:var(--muted);margin-bottom:20px}
+/* Inner pages must remain real pages on mobile — no giant empty cards. */
+@media(max-width:900px){
+ .inner-hero{padding:65px 0 52px}.inner-hero h1{font-size:50px;letter-spacing:-2.5px}.inner-hero p{font-size:16px}.page-block{padding:52px 0}.process-grid,.step-grid,.ecosystem-grid,.timeline-v4{grid-template-columns:1fr 1fr}.platform-grid-v4,.content-grid-v4,.article-grid-v4,.contact-v4 .contact-options,.two-col-info{grid-template-columns:1fr}.cta-strip{align-items:flex-start;flex-direction:column}.timeline-v4:before{display:none}.story-banner{padding:30px}.calculator-large h2{font-size:35px}
+}
+@media(max-width:560px){.process-grid,.step-grid,.ecosystem-grid{grid-template-columns:1fr}.inner-hero h1{font-size:44px}.page-intro h2{font-size:40px}.large-link-grid a{grid-template-columns:50px 1fr 20px;padding:16px}.info-card{padding:25px}.platform-grid-v4 a{min-height:210px}.article-grid-v4 a{min-height:230px}}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+<div class="container nav">
+
+<a href="#home" class="brand">
+  ZERO <span>FEAR</span>
+  <small>FEAR OUT. FREEDOM IN.</small>
+</a>
+
+<nav class="nav-links" id="navLinks">
+<a href="#home">Home</a>
+<a href="#about-detail">About</a>
+<a href="#training-detail">Training</a>
+<a href="#doorstep-detail">Doorstep</a>
+<a href="#experience-detail">Experience</a>
+<a href="#stories-detail">Stories</a>
+<a href="#contact-detail">Contact</a>
+</nav>
+
+<a href="#booking" class="btn">
+  Book Slot
+</a>
+
+<button class="menu" id="menuBtn">
+  ☰
+</button>
+
+</div>
+
+</header>
+
+
+<!-- =========================================================
+     HOME PAGE
+========================================================= -->
+
+<main id="home" class="page active">
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-slider" id="heroSlider">
+
+
+<!-- HERO 1 -->
+
+<div class="hero-slide active">
+
+<div class="hero-background"></div>
+
+<div class="container hero-content">
+
+<span class="hero-badge">
+  BEGINNER-FIRST TWO-WHEELER TRAINING
+</span>
+
+<h1>
+  সাইকেল জানেন না?
+  <br>
+  <span>Still, You Can Ride.</span>
+</h1>
+
+<p>
+  Complete beginner হোন, cycle না জানুন বা riding-এ ভয় পান —
+  step-by-step scooty & bike training শুরু করুন।
+</p>
+
+<div class="hero-actions">
+
+<a href="#training-detail" class="btn">
+  Explore Courses
+</a>
+
+<a href="#challenge" class="btn outline">
+  Take Zero Fear Challenge
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-vehicle">
+
+<svg viewBox="0 0 650 340" xmlns="http://www.w3.org/2000/svg">
+
+<circle cx="145" cy="270" r="47" fill="#111"/>
+<circle cx="505" cy="270" r="47" fill="#111"/>
+
+<circle cx="145" cy="270" r="25" fill="#68778D"/>
+<circle cx="505" cy="270" r="25" fill="#68778D"/>
+
+<path
+d="M142 220
+H260
+L330 115
+H410
+L505 220
+H375
+L330 160
+L292 220
+H142Z"
+fill="#FFD522"/>
+
+<path
+d="M330 115
+L355 55
+H420
+L475 92"
+fill="none"
+stroke="#FFFFFF"
+stroke-width="13"
+stroke-linecap="round"
+stroke-linejoin="round"/>
+
+<path
+d="M355 55
+H430"
+stroke="#FFD522"
+stroke-width="10"
+stroke-linecap="round"/>
+
+<rect
+x="250"
+y="190"
+width="130"
+height="27"
+rx="13"
+fill="#FFFFFF"/>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- HERO 2 VIDEO -->
+
+<div class="hero-slide">
+
+<div class="hero-background alt"></div>
+
+<div class="container hero-content">
+
+<span class="hero-badge">
+  REAL LEARNERS. REAL EXPERIENCES.
+</span>
+
+<h1>
+  Real Stories.
+  <br>
+  <span>Real Confidence.</span>
+</h1>
+
+<p>
+  আপনার real learner feedback,
+  transformation story অথবা documentary এখানে দেখানো হবে।
+</p>
+
+</div>
+
+<div class="hero-video">
+
+<div class="video-placeholder">
+
+<div>
+
+<strong>YOUR REAL VIDEO</strong>
+
+Add Hero Video 01 from the Admin Panel.
+
+<br>
+
+<small>
+YouTube / landscape MP4
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- HERO 3 -->
+
+<div class="hero-slide">
+
+<div class="hero-background"></div>
+
+<div class="container hero-content">
+
+<span class="hero-badge">
+  FROM FEAR TO FREEDOM
+</span>
+
+<h1>
+  Fear Out.
+  <br>
+  <span>Freedom In.</span>
+</h1>
+
+<p>
+  Speed নয়। আগে control.
+  আগে confidence.
+  তারপর real-road riding.
+</p>
+
+<div class="hero-actions">
+
+<a href="#about-detail" class="btn">
+  Discover Zero Fear
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-vehicle">
+
+<svg viewBox="0 0 650 340" xmlns="http://www.w3.org/2000/svg">
+
+<circle cx="145" cy="270" r="47" fill="#111"/>
+<circle cx="505" cy="270" r="47" fill="#111"/>
+
+<path
+d="M145 220
+H270
+L330 125
+H400
+L505 220
+H370
+L330 165
+L285 220
+H145"
+fill="none"
+stroke="#FFD522"
+stroke-width="25"
+stroke-linejoin="round"/>
+
+<path
+d="M330 125
+L355 55
+H420"
+fill="none"
+stroke="#FFFFFF"
+stroke-width="13"
+stroke-linecap="round"/>
+
+<path
+d="M420 55
+L475 95"
+fill="none"
+stroke="#FFFFFF"
+stroke-width="13"
+stroke-linecap="round"/>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- HERO 4 VIDEO -->
+
+<div class="hero-slide">
+
+<div class="hero-background alt"></div>
+
+<div class="container hero-content">
+
+<span class="hero-badge">
+  TRAINING IN ACTION
+</span>
+
+<h1>
+  Learn On.
+  <br>
+  <span>Move Forward.</span>
+</h1>
+
+<p>
+  Training-এর real moments,
+  road practice এবং learner journey-এর video এখানে থাকবে।
+</p>
+
+</div>
+
+<div class="hero-video">
+
+<div class="video-placeholder">
+
+<div>
+
+<strong>YOUR REAL VIDEO</strong>
+
+Add Hero Video 02 from the Admin Panel.
+
+<br>
+
+<small>
+YouTube / landscape MP4
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- HERO 5 -->
+
+<div class="hero-slide">
+
+<div class="hero-background"></div>
+
+<div class="container hero-content">
+
+<span class="hero-badge">
+  THE NEXT TWO-WHEELER EXPERIENCE
+</span>
+
+<h1>
+  Learn.
+  <br>
+  <span>Experience. Ride.</span>
+</h1>
+
+<p>
+  Training-এর বাইরে Two-Wheeler experience,
+  riding stories, insights এবং নতুন possibilities-এর দিকে journey।
+</p>
+
+<div class="hero-actions">
+
+<a href="#booking" class="btn">
+  Start Your Journey
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="hero-dots" id="heroDots"></div>
+
+</section>
+
+
+<!-- TRUST -->
+
+<section class="trust">
+
+<div class="container">
+
+<div class="trust-grid">
+
+<div class="trust-card">
+<strong>4.9★</strong>
+<span>Google Rating</span>
+</div>
+
+<div class="trust-card">
+<strong>300+</strong>
+<span>Google Reviews</span>
+</div>
+
+<div class="trust-card">
+<strong>5000+</strong>
+<span>Candidates Trained</span>
+</div>
+
+<div class="trust-card">
+<strong>2008</strong>
+<span>Tollygunge Journey</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- AI CHALLENGE -->
+
+<section id="challenge" class="section challenge-section">
+
+<div class="container">
+
+<div class="challenge">
+
+<div class="challenge-grid">
+
+<div>
+
+<span class="section-label">
+ZERO FEAR AI CHALLENGE
+</span>
+
+<h2>
+আপনি কতটা
+Ready To Ride?
+</h2>
+
+<p>
+কয়েকটি simple question-এর answer দিন।
+আপনার current starting point সম্পর্কে একটি
+friendly riding-readiness indication পান।
+</p>
+
+<br>
+
+<p>
+<strong>
+বাংলা + English • Instant Result • Beginner Friendly
+</strong>
+</p>
+
+</div>
+
+<div class="quiz" id="quiz"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT US -->
+
+<section id="about" class="section">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div class="about-visual">
+
+<div class="media-placeholder">
+  Real learner stories
+  <br><small>Training • Confidence • Progress</small>
+</div>
+
+</div>
+
+<div class="about-copy">
+
+<span class="section-label">
+ABOUT US
+</span>
+
+<h2>
+More than a
+riding class.
+</h2>
+
+<p>
+Zero Fear শুরু হয়েছে একটি simple idea থেকে —
+যারা riding শেখার সময় ভয়, hesitation বা confidence-এর
+সমস্যার মুখোমুখি হন, তাদের journey-কে সহজ করা।
+</p>
+
+<div class="about-points">
+
+<div class="point">
+<span class="point-icon">✓</span>
+<span>Beginner-first training approach</span>
+</div>
+
+<div class="point">
+<span class="point-icon">✓</span>
+<span>Cycle না জানলেও starting point থেকে শেখা</span>
+</div>
+
+<div class="point">
+<span class="point-icon">✓</span>
+<span>Trainer-led practical progression</span>
+</div>
+
+<div class="point">
+<span class="point-icon">✓</span>
+<span>Confidence before speed</span>
+</div>
+
+</div>
+
+<a href="#about-detail" class="btn">
+Read Our Story →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MISSION -->
+
+<section class="section mission" id="mission">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-label">
+OUR MISSION
+</span>
+
+<h2>
+Make riding feel
+possible.
+</h2>
+
+<p>
+Fear should not decide where you can go.
+Our mission is to make the learning journey
+structured, patient and confidence-focused.
+</p>
+
+</div>
+
+<div class="mission-grid">
+
+<div class="mission-main">
+
+<span class="section-label">
+OUR PROMISE
+</span>
+
+<h2>
+Confidence before speed.
+</h2>
+
+<p>
+Balance, control, coordination, turning,
+road awareness এবং practical riding —
+একটি step-এর পরে আরেকটি step।
+</p>
+
+<br>
+
+<a href="#mission-detail" class="btn">
+Explore Our Mission →
+</a>
+
+</div>
+
+<div class="mission-side">
+
+<div class="mission-mini">
+<strong>Learn</strong>
+<p>
+Understand the basics before moving ahead.
+</p>
+</div>
+
+<div class="mission-mini">
+<strong>Practice</strong>
+<p>
+Repeat until control becomes natural.
+</p>
+</div>
+
+<div class="mission-mini">
+<strong>Experience</strong>
+<p>
+Move progressively towards practical road riding.
+</p>
+</div>
+
+<div class="mission-mini">
+<strong>Freedom</strong>
+<p>
+Build the confidence to ride independently.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- JOURNEY -->
+
+<section class="section" id="journey">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-label">
+OUR JOURNEY
+</span>
+
+<h2>
+From one training journey
+to Zero Fear.
+</h2>
+
+<p>
+A journey built around learners, training and
+the belief that riding can create independence.
+</p>
+
+</div>
+
+<div class="journey-track">
+
+<div class="journey-card">
+<div class="journey-year">2008</div>
+<h3>Tollygunge</h3>
+<p>
+The Tollygunge training journey begins.
+</p>
+</div>
+
+<div class="journey-card">
+<div class="journey-year">2018</div>
+<h3>Growing Journey</h3>
+<p>
+Training methods and learner experience continue to evolve.
+</p>
+</div>
+
+<div class="journey-card">
+<div class="journey-year">2020</div>
+<h3>New Challenges</h3>
+<p>
+More structured learning and practical riding focus.
+</p>
+</div>
+
+<div class="journey-card">
+<div class="journey-year">2022</div>
+<h3>Expansion</h3>
+<p>
+The learning ecosystem grows with changing rider needs.
+</p>
+</div>
+
+<div class="journey-card">
+<div class="journey-year">5000+</div>
+<h3>Learner Journeys</h3>
+<p>
+Thousands of people have gone through the training journey.
+</p>
+</div>
+
+<div class="journey-card">
+<div class="journey-year">NOW</div>
+<h3>Zero Fear</h3>
+<p>
+A new chapter: Learn. Experience. Ride.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WOMEN EMPOWERMENT -->
+
+<section class="section women" id="women">
+
+<div class="container">
+
+<div class="women-grid">
+
+<div class="women-media">
+
+<div class="media-placeholder">
+  Real rider stories
+  <br><small>Confidence • Independence • Everyday mobility</small>
+</div>
+
+</div>
+
+<div class="women-copy">
+
+<span class="section-label">
+WOMEN EMPOWERMENT
+</span>
+
+<h2>
+Your first ride
+can change more than you think.
+</h2>
+
+<p>
+For many women, learning to ride is not only about
+a scooter or a bike. It can mean easier commuting,
+more independence and the confidence to move on their
+own terms.
+</p>
+
+<div class="women-list">
+
+<div>
+<b>✓</b>
+Patient beginner-friendly training
+</div>
+
+<div>
+<b>✓</b>
+Step-by-step confidence building
+</div>
+
+<div>
+<b>✓</b>
+Practical control before road pressure
+</div>
+
+<div>
+<b>✓</b>
+Supportive trainer guidance
+</div>
+
+</div>
+
+<a href="#training-detail" class="btn">
+Start Your Riding Journey →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STRUCTURED / BOOSTED TRAINING -->
+
+<section class="section training-method" id="training-method">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-label">
+BOOSTED TRAINING
+</span>
+
+<h2>
+A structured path,
+not random practice.
+</h2>
+
+<p>
+Training progresses according to your comfort and control.
+The goal is to build skills progressively rather than rush.
+</p>
+
+</div>
+
+<div class="method-box">
+
+<div class="method-steps">
+
+<div class="method-step">
+<strong>01</strong>
+<h3>Balance</h3>
+<p>
+Body position and basic balance.
+</p>
+</div>
+
+<div class="method-step">
+<strong>02</strong>
+<h3>Control</h3>
+<p>
+Brake, accelerator and starting control.
+</p>
+</div>
+
+<div class="method-step">
+<strong>03</strong>
+<h3>Turning</h3>
+<p>
+Smooth turning and slow-speed control.
+</p>
+</div>
+
+<div class="method-step">
+<strong>04</strong>
+<h3>Road</h3>
+<p>
+Trainer-guided practical road exposure.
+</p>
+</div>
+
+<div class="method-step">
+<strong>05</strong>
+<h3>Traffic</h3>
+<p>
+Awareness and handling of real situations.
+</p>
+</div>
+
+<div class="method-step">
+<strong>06</strong>
+<h3>Confidence</h3>
+<p>
+Progress towards independent riding.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY CHOOSE -->
+
+<section class="section" id="why">
+
+<div class="container">
+
+<div class="why-layout">
+
+<div class="why-intro">
+
+<span class="section-label">
+WHY CHOOSE ZERO FEAR
+</span>
+
+<h2>
+Built around
+the learner.
+</h2>
+
+<p>
+Every learner starts differently.
+That is why the training experience focuses
+on the individual starting point.
+</p>
+
+</div>
+
+<div class="why-items">
+
+<div class="why-item">
+
+<div class="why-square">01</div>
+
+<div>
+<h3>Non-Cyclists Welcome</h3>
+<p>
+Cycle না জানলেও basic balance থেকে journey শুরু করা যায়।
+</p>
+</div>
+
+<div class="why-arrow">→</div>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-square">02</div>
+
+<div>
+<h3>Beginner-First Training</h3>
+<p>
+Complete beginners-এর জন্য structured progression।
+</p>
+</div>
+
+<div class="why-arrow">→</div>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-square">03</div>
+
+<div>
+<h3>One-to-One Attention</h3>
+<p>
+Trainer-led guidance with individual attention.
+</p>
+</div>
+
+<div class="why-arrow">→</div>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-square">04</div>
+
+<div>
+<h3>Real-Road Practice</h3>
+<p>
+Basics-এর পরে practical road riding-এর দিকে progression।
+</p>
+</div>
+
+<div class="why-arrow">→</div>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-square">05</div>
+
+<div>
+<h3>Flexible Scheduling</h3>
+<p>
+আপনার availability অনুযায়ী training schedule করার সুবিধা।
+</p>
+</div>
+
+<div class="why-arrow">→</div>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-square">06</div>
+
+<div>
+<h3>Safety-Focused Learning</h3>
+<p>
+Speed-এর আগে control, awareness এবং responsible riding।
+</p>
+</div>
+
+<div class="why-arrow">→</div>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-square">07</div>
+
+<div>
+<h3>5000+ Learner Journeys</h3>
+<p>
+হাজার হাজার learner-এর training experience থেকে তৈরি approach।
+</p>
+</div>
+
+<div class="why-arrow">→</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COURSES -->
+
+<section class="section courses" id="courses">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-label">
+OUR COURSES
+</span>
+
+<h2>
+Choose your
+starting point.
+</h2>
+
+<p>
+Homepage-এ short preview.
+প্রতিটি course-এর complete breakdown আলাদা detail page-এ।
+</p>
+
+</div>
+
+<div class="course-carousel">
+
+
+<!-- COURSE 1 -->
+
+<article class="course-card">
+
+<div class="course-image">
+
+<div class="image-label">
+BEGINNER
+</div>
+
+<div class="media-placeholder">
+  BASIC SCOOTY TRAINING PHOTO
+</div>
+
+</div>
+
+<div class="course-body">
+
+<h3>
+Basic Scooty Training
+</h3>
+
+<p>
+Complete beginners এবং non-cyclists-এর জন্য
+structured scooty training.
+</p>
+
+<div class="course-meta">
+
+<span class="meta">15 Classes</span>
+<span class="meta">30 Min/Class</span>
+<span class="meta">Beginner</span>
+
+</div>
+
+<a href="#course-scooty" class="btn btn-blue">
+View Details →
+</a>
+
+</div>
+
+</article>
+
+
+<!-- COURSE 2 -->
+
+<article class="course-card">
+
+<div class="course-image">
+
+<div class="image-label">
+BIKE
+</div>
+
+<div class="media-placeholder">
+  BIKE TRAINING PHOTO
+</div>
+
+</div>
+
+<div class="course-body">
+
+<h3>
+Bike Training
+</h3>
+
+<p>
+Clutch, gear, acceleration,
+coordination এবং practical riding.
+</p>
+
+<div class="course-meta">
+
+<span class="meta">Structured</span>
+<span class="meta">Bike</span>
+<span class="meta">Road Focus</span>
+
+</div>
+
+<a href="#course-bike" class="btn btn-blue">
+View Details →
+</a>
+
+</div>
+
+</article>
+
+
+<!-- COURSE 3 -->
+
+<article class="course-card">
+
+<div class="course-image">
+
+<div class="image-label">
+ADVANCED
+</div>
+
+<div class="media-placeholder">
+  ADVANCED RIDING PHOTO
+</div>
+
+</div>
+
+<div class="course-body">
+
+<h3>
+Advanced / Refresher
+</h3>
+
+<p>
+আগে শিখেছিলেন কিন্তু confidence নেই?
+Structured restart বা refresher journey.
+</p>
+
+<div class="course-meta">
+
+<span class="meta">Custom</span>
+<span class="meta">Refresher</span>
+<span class="meta">Control</span>
+
+</div>
+
+<a href="#booking" class="btn btn-blue">
+Enquire →
+</a>
+
+</div>
+
+</article>
+
+
+<!-- COURSE 4 -->
+
+<article class="course-card">
+
+<div class="course-image">
+
+<div class="image-label">
+DOORSTEP
+</div>
+
+<div class="media-placeholder">
+  DOORSTEP TRAINING PHOTO
+</div>
+
+</div>
+
+<div class="course-body">
+
+<h3>
+Doorstep Training
+</h3>
+
+<p>
+Trainer আপনার location-এ পৌঁছাবে,
+up to 10 KM from Netaji Metro / Kudghat.
+</p>
+
+<div class="course-meta">
+
+<span class="meta">Up to 10 KM</span>
+<span class="meta">Doorstep</span>
+
+</div>
+
+<a href="#doorstep-detail" class="btn btn-blue">
+Check Fee →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DOORSTEP -->
+
+<section class="section doorstep" id="doorstep">
+
+<div class="container">
+
+<div class="doorstep-grid">
+
+<div>
+
+<span class="section-label">
+DOORSTEP TRAINING
+</span>
+
+<h2>
+We come to you.
+</h2>
+
+<p>
+Netaji Metro / Kudghat থেকে
+up to 10 KM doorstep training.
+</p>
+
+<div class="doorstep-features">
+
+<div>
+<b>✓</b>
+Tell us your location
+</div>
+
+<div>
+<b>✓</b>
+Calculate applicable fee
+</div>
+
+<div>
+<b>✓</b>
+Choose your preferred time
+</div>
+
+<div>
+<b>✓</b>
+Book your training
+</div>
+
+</div>
+
+<a href="#booking" class="btn">
+Book Doorstep Training →
+</a>
+
+</div>
+
+
+<div class="calculator">
+
+<h3>
+Doorstep Fee Calculator
+</h3>
+
+<p>
+Approximate distance from Netaji Metro / Kudghat.
+</p>
+
+<label>
+Distance
+</label>
+
+<input
+id="distanceInput"
+type="number"
+min="0"
+max="10"
+step="0.1"
+placeholder="Example: 2.5 KM"
+>
+
+<div class="distance-output">
+
+<span id="distanceRange">
+0–2 KM
+</span>
+
+<strong id="distanceFee">
+₹4,500
+</strong>
+
+<span id="distanceNote">
+Estimated applicable training fee
+</span>
+
+</div>
+
+<br>
+
+<a href="#booking" class="btn btn-blue">
+Continue To Booking →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="section" id="gallery">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-label">
+TRAINING IN ACTION
+</span>
+
+<h2>
+Real moments.
+Real learners.
+</h2>
+
+<p>
+Real photos and videos from your training journey.
+Real training moments, learner stories এবং progress-এর snapshots.
+</p>
+
+</div>
+
+<div class="gallery-filters">
+
+<button class="filter active" data-filter="all">
+All
+</button>
+
+<button class="filter" data-filter="scooty">
+Scooty
+</button>
+
+<button class="filter" data-filter="women">
+Women
+</button>
+
+<button class="filter" data-filter="bike">
+Bike
+</button>
+
+<button class="filter" data-filter="road">
+Road
+</button>
+
+<button class="filter" data-filter="success">
+Success
+</button>
+
+</div>
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item big" data-category="scooty">
+<div class="media-placeholder">
+REAL SCOOTY PHOTO
+</div>
+<div class="gallery-caption">
+Scooty Training
+</div>
+</div>
+
+
+<div class="gallery-item" data-category="women">
+<div class="media-placeholder">
+REAL WOMEN RIDER PHOTO
+</div>
+<div class="gallery-caption">
+Women
+</div>
+</div>
+
+
+<div class="gallery-item" data-category="bike">
+<div class="media-placeholder">
+REAL BIKE PHOTO
+</div>
+<div class="gallery-caption">
+Bike
+</div>
+</div>
+
+
+<div class="gallery-item" data-category="road">
+<div class="media-placeholder">
+REAL ROAD TRAINING PHOTO
+</div>
+<div class="gallery-caption">
+Real Road
+</div>
+</div>
+
+
+<div class="gallery-item" data-category="success">
+<div class="media-placeholder">
+REAL SUCCESS PHOTO
+</div>
+<div class="gallery-caption">
+Success
+</div>
+</div>
+
+
+<div class="gallery-item" data-category="scooty">
+<div class="media-placeholder">
+REAL TRAINING PHOTO
+</div>
+<div class="gallery-caption">
+Training
+</div>
+</div>
+
+</div>
+
+<br>
+
+<div style="text-align:center">
+
+<a href="#gallery-detail" class="btn btn-blue">
+Explore Full Gallery →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="section" id="reviews">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-label">
+REAL FEEDBACK
+</span>
+
+<h2>
+What our riders
+say.
+</h2>
+
+<p>
+যারা শুরুতে ভয় বা hesitation নিয়ে এসেছিলেন, তাঁদের real journey-ই Zero Fear-এর সবচেয়ে বড় proof.
+</p>
+
+</div>
+
+<div class="review-layout">
+
+<div class="rating-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<div class="rating-number">
+4.9
+</div>
+
+<p>
+<strong>
+Google Rating
+</strong>
+</p>
+
+<p>
+300+ Google Reviews
+</p>
+
+<br>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Zero%20Fear%20Kolkata"
+target="_blank"
+class="btn btn-blue"
+>
+View Google Reviews →
+</a>
+
+</div>
+
+
+<div class="testimonial">
+
+<span class="section-label">
+STUDENT STORY
+</span>
+
+<div class="testimonial-quote">
+“আমি আগে cycle-ও চালাতে পারতাম না।
+Step-by-step practice-এর পরে riding-এর
+ভয় অনেকটাই কমেছে।”
+</div>
+
+<div class="testimonial-name">
+Real Learner Feedback
+</div>
+
+<p class="muted">
+Real learner stories, Google feedback এবং video testimonials এখানেই দেখা যাবে.
+</p>
+
+<div class="review-actions">
+
+<a href="#reviews-detail" class="btn btn-blue">
+Read All Reviews →
+</a>
+
+<a href="#stories-detail" class="btn btn-outline">
+Watch More Stories
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SOCIAL -->
+
+<section class="section social" id="social">
+
+<div class="container">
+
+<div class="section-heading center">
+
+<span class="section-label">
+FOLLOW US
+</span>
+
+<h2>
+Stay Connected.
+</h2>
+
+<p>
+Training moments, learner stories, riding tips,
+new videos and the next Two-Wheeler Experience.
+</p>
+
+</div>
+
+
+<div class="social-grid">
+
+
+<a
+class="social-card"
+href="https://www.instagram.com/kolkata_scooty_bike_training"
+target="_blank"
+>
+
+<div class="social-icon">
+IG
+</div>
+
+<h3>
+Instagram
+</h3>
+
+<p>
+Latest Reels, training moments and learner stories.
+</p>
+
+<br>
+
+<strong style="color:var(--blue)">
+View Reels →
+</strong>
+
+</a>
+
+
+<a
+class="social-card"
+href="https://www.facebook.com/freelancetwowheelertraining.co.in"
+target="_blank"
+>
+
+<div class="social-icon">
+f
+</div>
+
+<h3>
+Facebook
+</h3>
+
+<p>
+Updates, posts, community content and announcements.
+</p>
+
+<br>
+
+<strong style="color:var(--blue)">
+View Posts →
+</strong>
+
+</a>
+
+
+<a
+class="social-card"
+href="#youtube"
+>
+
+<div class="social-icon">
+▶
+</div>
+
+<h3>
+YouTube
+</h3>
+
+<p>
+Documentaries, training videos, Shorts and rider stories.
+</p>
+
+<br>
+
+<strong style="color:var(--blue)">
+Watch Videos →
+</strong>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BLOG -->
+
+<section class="section" id="blog">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-label">
+RIDING TIPS & STORIES
+</span>
+
+<h2>
+Useful things
+to know.
+</h2>
+
+<p>
+SEO-focused educational content, riding tips and
+Two-Wheeler stories.
+</p>
+
+</div>
+
+
+<div class="blog-list">
+
+
+<article class="blog-card">
+
+<div class="blog-image">
+REAL BLOG COVER IMAGE
+</div>
+
+<div class="blog-body">
+
+<span class="blog-date">
+RIDING GUIDE
+</span>
+
+<h3>
+Cycle না জানলে কি Scooty শেখা সম্ভব?
+</h3>
+
+<p>
+A beginner-focused guide for first-time learners.
+</p>
+
+<br>
+
+<a href="#blog-cycle" class="btn btn-blue">
+Read Article →
+</a>
+
+</div>
+
+</article>
+
+
+<article class="blog-card">
+
+<div class="blog-image">
+REAL BLOG COVER IMAGE
+</div>
+
+<div class="blog-body">
+
+<span class="blog-date">
+BEGINNER GUIDE
+</span>
+
+<h3>
+Scooty শেখার সময় কোন mistakes avoid করবেন?
+</h3>
+
+<p>
+Simple practical tips for new riders.
+</p>
+
+<br>
+
+<a href="#blog-mistakes" class="btn btn-blue">
+Read Article →
+</a>
+
+</div>
+
+</article>
+
+
+<article class="blog-card">
+
+<div class="blog-image">
+REAL BLOG COVER IMAGE
+</div>
+
+<div class="blog-body">
+
+<span class="blog-date">
+ROAD SAFETY
+</span>
+
+<h3>
+Traffic-এর আগে কোন skills practice করা উচিত?
+</h3>
+
+<p>
+Understanding control before moving into busy roads.
+</p>
+
+<br>
+
+<a href="#blog-traffic" class="btn btn-blue">
+Read Article →
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="section" id="faq">
+
+<div class="container">
+
+<div class="section-heading center">
+
+<span class="section-label">
+FAQ
+</span>
+
+<h2>
+Quick answers.
+</h2>
+
+</div>
+
+
+<div class="faq-list">
+
+<details>
+<summary>
+আমি সাইকেল চালাতে পারি না — স্কুটি শিখতে পারবো?
+</summary>
+<p>
+হ্যাঁ। Training basic balance, coordination,
+control এবং step-by-step practice থেকে শুরু করা যায়।
+</p>
+</details>
+
+
+<details>
+<summary>
+Basic Scooty Training-এ কতগুলো class আছে?
+</summary>
+<p>
+Basic Scooty Training programme-এ 15টি class রয়েছে।
+প্রতিটি class approximately 30 minutes।
+</p>
+</details>
+
+
+<details>
+<summary>
+Training কি একদম beginner-friendly?
+</summary>
+<p>
+হ্যাঁ। Training learner-এর current ability এবং comfort
+অনুযায়ী step-by-step progress করে।
+</p>
+</details>
+
+
+<details>
+<summary>
+Road practice কি আছে?
+</summary>
+<p>
+Training progression-এর মধ্যে trainer-guided practical
+road riding এবং traffic awareness অন্তর্ভুক্ত হতে পারে,
+learner-এর readiness অনুযায়ী।
+</p>
+</details>
+
+
+<details>
+<summary>
+Doorstep training কি available?
+</summary>
+<p>
+হ্যাঁ। Netaji Metro / Kudghat থেকে up to 10 KM,
+subject to availability.
+</p>
+</details>
+
+
+<details>
+<summary>
+Doorstep training-এর fee কত?
+</summary>
+<p>
+0–2 KM ₹4,500; 2–3 KM ₹5,000;
+3–10 KM distance অনুযায়ী ₹8,000 পর্যন্ত।
+Calculator দিয়ে approximate fee check করা যাবে।
+</p>
+</details>
+
+
+<details>
+<summary>
+How can I book a slot?
+</summary>
+<p>
+Website booking form, Call অথবা WhatsApp-এর মাধ্যমে
+booking request পাঠানো যাবে।
+</p>
+</details>
+
+</div>
+
+<br>
+
+<div style="text-align:center">
+
+<a href="#faq-detail" class="btn btn-blue">
+View All FAQs →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section contact" id="contact">
+
+<div class="container">
+
+<div class="contact-grid">
+
+<div class="contact-info">
+
+<span class="section-label">
+CONTACT
+</span>
+
+<h2>
+Let's talk
+about your ride.
+</h2>
+
+<p>
+Course selection, beginner questions,
+doorstep availability বা booking —
+আমাদের সঙ্গে কথা বলুন।
+</p>
+
+<div class="contact-list">
+
+<div>
+<span>CALL</span>
+<strong>7980110273</strong>
+</div>
+
+<div>
+<span>ALTERNATE</span>
+<strong>7980108587</strong>
+</div>
+
+<div>
+<span>LOCATION</span>
+<strong>Tollygunge · Netaji Metro · Kudghat</strong>
+</div>
+
+<div>
+<span>DOORSTEP</span>
+<strong>Up to 10 KM</strong>
+</div>
+
+</div>
+
+<br>
+
+<a
+href="https://wa.me/917980110273"
+target="_blank"
+class="btn"
+>
+WhatsApp Us →
+</a>
+
+</div>
+
+
+<form class="contact-form" id="contactForm">
+
+<span class="section-label">
+SEND AN ENQUIRY
+</span>
+
+<br><br>
+
+<div class="form-grid">
+
+<div class="form-field">
+
+<label>
+Name
+</label>
+
+<input
+id="contactName"
+required
+placeholder="Your name"
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Phone
+</label>
+
+<input
+id="contactPhone"
+required
+type="tel"
+placeholder="10-digit number"
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Interested In
+</label>
+
+<select id="contactCourse">
+
+<option>Basic Scooty Training</option>
+<option>Bike Training</option>
+<option>Advanced / Refresher</option>
+<option>Doorstep Training</option>
+
+</select>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Preferred Time
+</label>
+
+<input
+id="contactTime"
+placeholder="Morning / Afternoon / Evening"
+>
+
+</div>
+
+
+<div class="form-field full">
+
+<label>
+Message
+</label>
+
+<textarea
+id="contactMessage"
+rows="5"
+placeholder="Tell us what you need..."
+></textarea>
+
+</div>
+
+</div>
+
+<button class="btn btn-blue" type="submit">
+Send On WhatsApp →
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section class="final">
+
+<div class="container">
+
+<div class="final-box">
+
+<h2>
+Ready To Start
+Your Riding Journey?
+</h2>
+
+<p>
+FEAR OUT. FREEDOM IN.
+</p>
+
+<a href="#booking" class="btn">
+Book Your Slot →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     INNER PAGES
+========================================================= -->
+
+
+
+<!-- =========================================================
+     INNER PAGE SYSTEM — ZERO FEAR V4
+========================================================= -->
+
+<!-- TRAINING HUB -->
+<section id="training-detail" class="page">
+  <div class="inner-hero">
+    <div class="container">
+      <span class="section-label">TWO-WHEELER TRAINING</span>
+      <h1>Learn properly.<br><span>Ride with confidence.</span></h1>
+      <p>Zero Fear training is built for beginners — including people who cannot ride a bicycle. Choose a programme, understand the process, then book when you are ready.</p>
+      <div class="inner-actions"><a href="#course-scooty" class="btn">Basic Scooty →</a><a href="#course-bike" class="btn outline">Bike Training →</a></div>
+    </div>
+  </div>
+  <div class="container page-block">
+    <div class="page-intro"><span class="section-label">HOW WE TRAIN</span><h2>Not one-size-fits-all.</h2><p>একজন learner কোথা থেকে শুরু করছেন, সেটাই progression-এর starting point. Training-এর লক্ষ্য শুধু vehicle চালানো নয় — control, coordination, awareness এবং confidence তৈরি করা।</p></div>
+    <div class="process-grid">
+      <article><b>01</b><h3>Understand</h3><p>Vehicle controls, body position, brake, accelerator এবং basic coordination.</p></article>
+      <article><b>02</b><h3>Balance</h3><p>Slow-speed balance ও starting/stopping-এর উপর foundation তৈরি করা।</p></article>
+      <article><b>03</b><h3>Practice</h3><p>Turning, control এবং repeat practice — trainer-এর guidance সহ।</p></article>
+      <article><b>04</b><h3>Progress</h3><p>Comfort তৈরি হলে practical road riding-এর দিকে gradual progression.</p></article>
+    </div>
+  </div>
+  <div class="container page-block soft-panel">
+    <div><span class="section-label">CHOOSE YOUR PATH</span><h2>Three different starting points.</h2></div>
+    <div class="large-link-grid">
+      <a href="#course-scooty"><span>01</span><div><h3>Basic Scooty Training</h3><p>15-class beginner programme. Non-cyclists welcome.</p></div><strong>→</strong></a>
+      <a href="#course-bike"><span>02</span><div><h3>Bike Training</h3><p>Clutch, gear, acceleration and practical coordination.</p></div><strong>→</strong></a>
+      <a href="#course-advanced"><span>03</span><div><h3>Advanced / Refresher</h3><p>Restart your riding journey with structured practice.</p></div><strong>→</strong></a>
+    </div>
+  </div>
+  <div class="container page-block"><div class="cta-strip"><div><small>READY WHEN YOU ARE</small><h2>Start with a conversation.</h2><p>Call or WhatsApp us before booking if you are unsure which training is right for you.</p></div><a href="#booking" class="btn">Book / Enquire →</a></div></div>
+</section>
+
+<!-- DOORSTEP HUB -->
+<section id="doorstep-detail" class="page">
+  <div class="inner-hero light-blue">
+    <div class="container">
+      <span class="section-label">DEDICATED DOORSTEP TRAINING</span>
+      <h1>We come to you.</h1>
+      <p>Netaji Metro / Kudghat থেকে up to 10 KM doorstep training. Location জানিয়ে applicable fee ও availability জেনে booking করুন।</p>
+      <a href="#booking" class="btn">Book Doorstep Training →</a>
+    </div>
+  </div>
+  <div class="container page-block">
+    <div class="page-intro"><span class="section-label">HOW IT WORKS</span><h2>Four simple steps.</h2></div>
+    <div class="step-grid">
+      <article><span>01</span><h3>Tell us your location</h3><p>Area / locality share করুন যাতে distance range বোঝা যায়।</p></article>
+      <article><span>02</span><h3>Check the applicable fee</h3><p>Distance অনুযায়ী applicable doorstep fee জানুন।</p></article>
+      <article><span>03</span><h3>Choose your preferred time</h3><p>Availability অনুযায়ী suitable training time discuss করুন।</p></article>
+      <article><span>04</span><h3>Book your training</h3><p>Call / WhatsApp-এর মাধ্যমে booking request complete করুন।</p></article>
+    </div>
+  </div>
+  <div class="container page-block two-col-info">
+    <div class="info-card"><span class="section-label">DISTANCE</span><h2>Up to 10 KM</h2><p>Reference point: Netaji Metro / Kudghat. Final applicability depends on the location and availability.</p></div>
+    <div class="info-card"><span class="section-label">FEE GUIDE</span><h2>₹4,500+</h2><p>Current stored fee bands: 0–2 KM ₹4,500; 2–3 KM ₹5,000; 3–10 KM distance-based fee up to ₹8,000.</p></div>
+  </div>
+  <div class="container page-block"><div class="calculator-large"><span class="section-label">DOORSTEP FEE CALCULATOR</span><h2>Know the range before you book.</h2><p>Approximate distance from Netaji Metro / Kudghat.</p><input id="v4Distance" placeholder="Example: 2.5 KM" inputmode="decimal"><div id="v4Fee" class="fee-result">Enter a distance to see the applicable fee range.</div><a href="#booking" class="btn">Continue to Booking →</a></div></div>
+</section>
+
+<!-- EXPERIENCE HUB -->
+<section id="experience-detail" class="page">
+  <div class="inner-hero yellow-blue">
+    <div class="container">
+      <span class="section-label">THE NEXT CHAPTER</span>
+      <h1>Two-Wheeler<br><span>Experience.</span></h1>
+      <p>Zero Fear is growing beyond a traditional training class — towards a wider ecosystem built around learning, riding, community and useful Two-Wheeler content.</p>
+    </div>
+  </div>
+  <div class="container page-block">
+    <div class="page-intro"><span class="section-label">THE ECOSYSTEM</span><h2>Learn. Experience. Ride. Connect. Discover.</h2></div>
+    <div class="ecosystem-grid">
+      <article><b>LEARN</b><h3>Two-Wheeler Training</h3><p>Beginner-first training and practical learning.</p></article>
+      <article><b>EXPERIENCE</b><h3>Two-Wheeler Experience</h3><p>Content, activities and experiences around riding.</p></article>
+      <article><b>RIDE</b><h3>B2C Two-Wheeler Offering</h3><p>A future-facing offering around the wider riding journey.</p></article>
+      <article><b>CONNECT</b><h3>Two-Wheeler Community</h3><p>Stories, people and shared riding interests.</p></article>
+      <article><b>DISCOVER</b><h3>Riding Tips & Insights</h3><p>Useful content for people before and after training.</p></article>
+    </div>
+  </div>
+  <div class="container page-block"><div class="story-banner"><small>WHY THIS EXISTS</small><h2>এতদিন আমরা মানুষকে Two-Wheeler চালানো শিখিয়েছি। এবার শুধু শেখাবো না — journey-টাকেই আরও বড় করবো।</h2><a href="#blog-detail" class="btn">Explore Riding Content →</a></div></div>
+</section>
+
+<!-- JOURNEY PAGE -->
+<section id="journey-detail" class="page">
+  <div class="inner-hero light-blue"><div class="container"><span class="section-label">OUR JOURNEY</span><h1>From Tollygunge<br><span>to Zero Fear.</span></h1><p>2008 থেকে Tollygunge training journey-এর শুরু। এরপর learner experience, methods এবং vision ধাপে ধাপে evolve হয়েছে।</p></div></div>
+  <div class="container page-block"><div class="timeline-v4">
+    <article><span>2008</span><h3>Tollygunge</h3><p>The Tollygunge training journey begins.</p></article>
+    <article><span>2018</span><h3>Growing Journey</h3><p>Training methods and learner experience continue to evolve.</p></article>
+    <article><span>2020</span><h3>Structured Progression</h3><p>A stronger focus on beginner-friendly, practical learning.</p></article>
+    <article><span>Today</span><h3>Zero Fear</h3><p>A broader vision around training, experience, riding and community.</p></article>
+  </div></div>
+  <div class="container page-block"><div class="cta-strip"><div><small>THE STORY CONTINUES</small><h2>One learner at a time.</h2><p>Our journey is still being built through real learner experiences.</p></div><a href="#reviews-detail" class="btn">See Learner Stories →</a></div></div>
+</section>
+
+<!-- WOMEN PAGE -->
+<section id="women-detail" class="page">
+  <div class="inner-hero"><div class="container"><span class="section-label">CONFIDENCE & INDEPENDENCE</span><h1>For riders who want<br><span>more freedom.</span></h1><p>Women-friendly training with a patient, beginner-first approach. No pressure to rush — the focus stays on control, comfort and confidence.</p></div></div>
+  <div class="container page-block two-col-info"><div class="info-card"><span class="section-label">STARTING FROM ZERO</span><h2>Cycle না জানলেও শুরু করা যায়।</h2><p>Training starts from the learner's actual level. Balance, coordination and controlled practice come first.</p></div><div class="info-card"><span class="section-label">YOUR PACE</span><h2>Progress without pressure.</h2><p>Ask questions, repeat practice and discuss your comfort level with the trainer.</p></div></div>
+  <div class="container page-block"><div class="quote-panel"><span class="section-label">REAL LEARNER VOICE</span><blockquote>“আমি আগে cycle-ও চালাতে পারতাম না। Step-by-step practice-এর পরে riding-এর ভয় অনেকটাই কমেছে।”</blockquote><p>Example learner story — replace with the verified customer testimonial from Admin.</p></div></div>
+</section>
+
+<!-- STORIES HUB -->
+<section id="stories-detail" class="page">
+  <div class="inner-hero light-blue"><div class="container"><span class="section-label">REAL STORIES</span><h1>What riders say.<br><span>What riding looks like.</span></h1><p>Google feedback, learner stories, training moments and social content — each has its own destination below.</p></div></div>
+  <div class="container page-block"><div class="platform-grid-v4">
+    <a href="#reviews-detail"><small>REVIEWS</small><h2>Google Reviews</h2><p>4.9 Google Rating • 300+ Google Reviews.</p><strong>Read Reviews →</strong></a>
+    <a href="#instagram-detail"><small>INSTAGRAM</small><h2>Instagram</h2><p>Reels, training moments and learner stories.</p><strong>View Instagram →</strong></a>
+    <a href="#facebook-detail"><small>FACEBOOK</small><h2>Facebook</h2><p>Posts, updates and community content.</p><strong>View Facebook →</strong></a>
+    <a href="#youtube"><small>YOUTUBE</small><h2>YouTube</h2><p>Documentaries, Shorts and training videos.</p><strong>Watch YouTube →</strong></a>
+    <a href="#gallery-detail"><small>GALLERY</small><h2>Training in Action</h2><p>Real training visuals, once connected from Admin.</p><strong>Open Gallery →</strong></a>
+    <a href="#blog-detail"><small>RIDING TIPS</small><h2>Blog & Insights</h2><p>Useful beginner guides and Two-Wheeler content.</p><strong>Explore Articles →</strong></a>
+  </div></div>
+</section>
+
+<!-- INSTAGRAM PAGE -->
+<section id="instagram-detail" class="page">
+  <div class="inner-hero"><div class="container"><span class="section-label">INSTAGRAM</span><h1>Training, stories<br><span>& real moments.</span></h1><p>Our Instagram is where short-form learner stories, training moments and practical Two-Wheeler content live.</p><a class="btn" target="_blank" href="https://www.instagram.com/kolkata_scooty_bike_training">Open Instagram →</a></div></div>
+  <div class="container page-block"><div class="page-intro"><span class="section-label">WHAT YOU'LL FIND</span><h2>More than a link.</h2></div><div class="content-grid-v4"><article><h3>Learner Stories</h3><p>Real progress, reactions and confidence-building moments.</p></article><article><h3>Training Moments</h3><p>Scooty and bike training clips from the learning process.</p></article><article><h3>Riding Tips</h3><p>Short, practical explanations for everyday riders.</p></article><article><h3>New Zero Fear Chapter</h3><p>Updates as the Two-Wheeler Experience ecosystem develops.</p></article></div></div>
+</section>
+
+<!-- FACEBOOK PAGE -->
+<section id="facebook-detail" class="page">
+  <div class="inner-hero light-blue"><div class="container"><span class="section-label">FACEBOOK</span><h1>Updates, announcements<br><span>& community.</span></h1><p>Longer updates, announcements, training information and community-facing posts.</p><a class="btn" target="_blank" href="https://www.facebook.com/freelancetwowheelertraining.co.in">Open Facebook →</a></div></div>
+  <div class="container page-block"><div class="content-grid-v4"><article><small>UPDATES</small><h3>Training updates</h3><p>New information about courses, schedules and learner-facing announcements.</p></article><article><small>COMMUNITY</small><h3>People & stories</h3><p>Stories and conversations around the Two-Wheeler journey.</p></article><article><small>VIDEO</small><h3>Longer-form content</h3><p>Video posts and campaign content can live here.</p></article></div></div>
+</section>
+
+<!-- CONTACT / EMAIL PAGE -->
+<section id="contact-detail" class="page">
+  <div class="inner-hero"><div class="container"><span class="section-label">CONTACT ZERO FEAR</span><h1>Let's talk about<br><span>your riding journey.</span></h1><p>আপনি beginner, non-cyclist, refresher learner বা doorstep training নিয়ে জানতে চাইলে — আগে কথা বলুন।</p></div></div>
+  <div class="container page-block contact-v4"><div class="contact-options"><a href="tel:+917980110273"><small>CALL</small><h2>7980110273</h2><p>Training / booking enquiries.</p></a><a href="https://wa.me/917980110273" target="_blank"><small>WHATSAPP</small><h2>Chat with us</h2><p>Share your name, area and what you want to learn.</p></a><a href="mailto:hello@zerofear.in"><small>EMAIL</small><h2>Write to Zero Fear</h2><p>For detailed enquiries and business communication.</p></a></div></div>
+  <div class="container page-block"><div class="form-card"><span class="section-label">SEND AN ENQUIRY</span><h2>Tell us what you need.</h2><p>For booking, use the dedicated booking form so the team receives the right details.</p><a href="#booking" class="btn">Open Booking Form →</a></div></div>
+</section>
+
+<!-- BLOG HUB -->
+<section id="blog-detail" class="page">
+  <div class="inner-hero light-blue"><div class="container"><span class="section-label">RIDING TIPS & STORIES</span><h1>Useful things to know<br><span>before you ride.</span></h1><p>Beginner-friendly articles, practical explanations and Two-Wheeler insights. Each topic has its own article page.</p></div></div>
+  <div class="container page-block"><div class="article-grid-v4"><a href="#blog-cycle"><small>BEGINNER</small><h2>Cycle না জানলে কি Scooty শেখা সম্ভব?</h2><p>Understand the role of balance, coordination and structured practice.</p><strong>Read Article →</strong></a><a href="#blog-mistakes"><small>COMMON MISTAKES</small><h2>New riders make these mistakes.</h2><p>Simple things that can make the learning process harder.</p><strong>Read Article →</strong></a><a href="#blog-traffic"><small>ROAD RIDING</small><h2>When should you enter traffic?</h2><p>A gradual approach to practical road riding.</p><strong>Read Article →</strong></a></div></div>
+</section>
+
+<!-- ADVANCED COURSE -->
+<section id="course-advanced" class="page"><div class="inner-hero light-blue"><div class="container"><span class="section-label">ADVANCED / REFRESHER</span><h1>Restart with<br><span>more confidence.</span></h1><p>আগে শিখেছিলেন, কিন্তু regular riding হয়নি? Structured refresher practice দিয়ে confidence আবার build করা যায়।</p><a href="#booking" class="btn">Enquire →</a></div></div><div class="container page-block"><div class="process-grid"><article><b>01</b><h3>Identify the gap</h3><p>কোথায় hesitation বা control issue হচ্ছে সেটা বুঝুন।</p></article><article><b>02</b><h3>Rebuild control</h3><p>Basic manoeuvres এবং slow-speed control revisit করুন।</p></article><article><b>03</b><h3>Practice</h3><p>Turning, braking এবং road awareness-এর উপর repeat practice.</p></article><article><b>04</b><h3>Progress</h3><p>Comfort অনুযায়ী practical riding-এর দিকে এগোন।</p></article></div></div></section>
+
+<!-- ABOUT DETAIL -->
+
+<section id="about-detail" class="page">
+
+<div class="container inner-top">
+
+<span class="breadcrumb">
+Home / About Us
+</span>
+
+<h1>
+About Zero Fear
+</h1>
+
+<p>
+A beginner-first two-wheeler learning and experience brand.
+</p>
+
+</div>
+
+<div class="container detail-content">
+
+<h2>
+Why Zero Fear?
+</h2>
+
+<p>
+For many people, the biggest barrier to riding is not the
+vehicle itself — it is the fear of losing balance,
+making mistakes or entering traffic before they are ready.
+</p>
+
+<h2>
+Our Approach
+</h2>
+
+<p>
+Zero Fear focuses on a structured progression:
+balance, control, turning, practical road exposure,
+traffic awareness and confidence.
+</p>
+
+<h2>
+Learn. Experience. Ride.
+</h2>
+
+<p>
+The long-term vision goes beyond a traditional training
+class — creating a wider Two-Wheeler Experience around
+learning, riding, community and useful riding content.
+</p>
+
+<br>
+
+<a href="#booking" class="btn">
+Start Your Journey →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- MISSION DETAIL -->
+
+<section id="mission-detail" class="page">
+
+<div class="container inner-top">
+
+<span class="breadcrumb">
+Home / Our Mission
+</span>
+
+<h1>
+Our Mission
+</h1>
+
+<p>
+Make two-wheeler learning more approachable,
+structured and confidence-focused.
+</p>
+
+</div>
+
+<div class="container detail-content">
+
+<h2>
+Confidence Before Speed
+</h2>
+
+<p>
+A beginner does not need pressure to go faster.
+They need the right progression and enough practice
+to understand the vehicle.
+</p>
+
+<h2>
+Our Promise</h2>
+
+<ul>
+<li>Begin from the learner's current level.</li>
+<li>Build control before increasing complexity.</li>
+<li>Use practical training wherever appropriate.</li>
+<li>Encourage responsible road behaviour.</li>
+<li>Keep the learning journey supportive.</li>
+</ul>
+
+<br>
+
+<a href="#training-detail" class="btn">
+Explore Courses →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- SCOOTY COURSE DETAIL -->
+
+<section id="course-scooty" class="page">
+
+<div class="container inner-top">
+
+<span class="breadcrumb">
+Courses / Basic Scooty Training
+</span>
+
+<h1>
+Basic Scooty Training
+</h1>
+
+<p>
+15-class structured programme for beginners.
+</p>
+
+</div>
+
+<div class="container detail-content">
+
+<h2>
+Who is this for?
+</h2>
+
+<p>
+Complete beginners, people who cannot ride a bicycle,
+women starting from zero and riders who need a structured
+restart can enquire about this programme.
+</p>
+
+<h2>
+Class Structure
+</h2>
+
+<ol>
+<li>Balance and body position</li>
+<li>Starting and stopping</li>
+<li>Brake and accelerator coordination</li>
+<li>Turning practice</li>
+<li>Slow-speed control</li>
+<li>Trainer-guided practical riding</li>
+<li>Road awareness</li>
+<li>Traffic progression when ready</li>
+<li>Helmet and safety practice</li>
+<li>Confidence building</li>
+</ol>
+
+<h2>
+Programme Format
+</h2>
+
+<p>
+15 classes. Approximately 30 minutes per class.
+Actual progression depends on learner ability,
+comfort and training conditions.
+</p>
+
+<br>
+
+<a href="#booking" class="btn">
+Book Basic Scooty Training →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- BIKE COURSE DETAIL -->
+
+<section id="course-bike" class="page">
+
+<div class="container inner-top">
+
+<span class="breadcrumb">
+Courses / Bike Training
+</span>
+
+<h1>
+Bike Training
+</h1>
+
+<p>
+Learn clutch, gear, acceleration and coordination
+through structured practice.
+</p>
+
+</div>
+
+<div class="container detail-content">
+
+<h2>
+What You Learn
+</h2>
+
+<ul>
+<li>Clutch control</li>
+<li>Gear shifting</li>
+<li>Acceleration coordination</li>
+<li>Starting and stopping</li>
+<li>Turning</li>
+<li>Slow-speed control</li>
+<li>Road awareness</li>
+<li>Practical riding progression</li>
+</ul>
+
+<h2>
+Important</h2>
+
+<p>
+The fundamental coordination of clutch, gear and acceleration
+is common across motorcycles, but higher-displacement motorcycles
+can have significantly different power and handling characteristics.
+Progressive learning and responsible riding are important.
+</p>
+
+<br>
+
+<a href="#booking" class="btn">
+Enquire About Bike Training →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- BRANCH DETAIL -->
+
+<section id="branch-detail" class="page">
+
+<div class="container inner-top">
+
+<span class="breadcrumb">
+Home / Tollygunge
+</span>
+
+<h1>
+Tollygunge
+</h1>
+
+<p>
+Netaji Metro · Kudghat
+</p>
+
+</div>
+
+<div class="container detail-content">
+
+<h2>
+Our Tollygunge Journey
+</h2>
+
+<p>
+The Tollygunge training journey dates back to 2008.
+This is the dedicated Zero Fear location around
+Netaji Metro / Kudghat.
+</p>
+
+<h2>
+What You Can Explore Here
+</h2>
+
+<ul>
+<li>Beginner scooty training</li>
+<li>Bike training</li>
+<li>Advanced / refresher training</li>
+<li>Structured learner progression</li>
+<li>Booking and course enquiries</li>
+</ul>
+
+<h2>
+Location</h2>
+
+<p>
+Tollygunge · Netaji Metro · Kudghat, Kolkata.
+</p>
+
+<br>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Netaji%20Metro%20Kudghat%20Kolkata"
+target="_blank"
+class="btn btn-blue"
+>
+Open Directions →
+</a>
+
+<br><br>
+
+<a href="#booking" class="btn">
+Book Training →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY DETAIL -->
+
+<section id="gallery-detail" class="page">
+
+<div class="container inner-top">
+
+<span class="breadcrumb">
+Home / Gallery
+</span>
+
+<h1>
+Training In Action
+</h1>
+
+<p>
+The production gallery will be connected to
+the Admin Media Manager.
+</p>
+
+</div>
+
+<div class="container">
+
+<div class="gallery-grid">
+
+<div class="gallery-item big">
+<div class="media-placeholder">REAL PHOTO</div>
+</div>
+
+<div class="gallery-item">
+<div class="media-placeholder">SCOOTY</div>
+</div>
+
+<div class="gallery-item">
+<div class="media-placeholder">WOMEN</div>
+</div>
+
+<div class="gallery-item">
+<div class="media-placeholder">BIKE</div>
+</div>
+
+<div class="gallery-item">
+<div class="media-placeholder">ROAD</div>
+</div>
+
+<div class="gallery-item">
+<div class="media-placeholder">SUCCESS</div>
+</div>
+
+<div class="gallery-item">
+<div class="media-placeholder">TRAINING</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- REVIEWS DETAIL -->
+
+<section id="reviews-detail" class="page">
+
+<div class="container inner-top">
+
+<span class="breadcrumb">
+Home / Reviews
+</span>
+
+<h1>
+Real Feedback
+</h1>
+
+<p>
+Google reviews, learner feedback and social video stories.
+</p>
+
+</div>
+
+<div class="container">
+
+<div class="review-layout">
+
+<div class="rating-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<div class="rating-number">
+4.9
+</div>
+
+<p>
+300+ Google Reviews
+</p>
+
+<br>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Zero%20Fear%20Kolkata"
+target="_blank"
+class="btn btn-blue"
+>
+Open Google Reviews
+</a>
+
+</div>
+
+<div class="testimonial">
+
+<span class="section-label">
+FEATURED STORY
+</span>
+
+<div class="testimonial-quote">
+Real customer video / Reel goes here.
+</div>
+
+<p class="muted">
+Add your actual Instagram Reel, YouTube testimonial
+or customer feedback video from Admin Panel.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ DETAIL -->
+
+<section id="faq-detail" class="page">
+
+<div class="container inner-top">
+
+<span class="breadcrumb">
+Home / FAQ
+</span>
+
+<h1>
+Frequently Asked Questions
+</h1>
+
+<p>
+Complete answers for new riders.
+</p>
+
+</div>
+
+<div class="container faq-list">
+
+<details open>
+<summary>
+সাইকেল না জানলেও কি স্কুটি শেখা সম্ভব?
+</summary>
+<p>
+Yes. Beginner training can start with balance,
+coordination and basic vehicle control.
+</p>
+</details>
+
+<details>
+<summary>
+Basic Scooty Training কত class?
+</summary>
+<p>
+15 classes, approximately 30 minutes each.
+</p>
+</details>
+
+<details>
+<summary>
+Doorstep training কতদূর?
+</summary>
+<p>
+Up to 10 KM from Netaji Metro / Kudghat,
+subject to availability.
+</p>
+</details>
+
+<details>
+<summary>
+Doorstep training fee কত?
+</summary>
+<p>
+0–2 KM ₹4,500; 2–3 KM ₹5,000;
+3–10 KM distance-based fee up to ₹8,000.
+</p>
+</details>
+
+<details>
+<summary>
+How do I book?
+</summary>
+<p>
+Use the website booking form or contact us
+through Call / WhatsApp.
+</p>
+</details>
+
+</div>
+
+</section>
+
+
+<!-- BLOG ARTICLE 1 -->
+
+<section id="blog-cycle" class="page">
+
+<div class="container inner-top">
+
+<span class="breadcrumb">
+Riding Tips / Beginner Guide
+</span>
+
+<h1>
+Cycle না জানলে কি Scooty শেখা সম্ভব?
+</h1>
+
+<p>
+A beginner-focused explanation.
+</p>
+
+</div>
+
+<div class="container detail-content">
+
+<p>
+অনেকেই ভাবেন cycle না জানলে scooty শেখা সম্ভব নয়।
+বাস্তবে learning-এর সবচেয়ে গুরুত্বপূর্ণ বিষয় হলো
+balance, coordination এবং controlled practice।
+</p>
+
+<h2>
+Start From The Basics
+</h2>
+
+<p>
+A structured training process can begin with basic balance,
+body position, brake control and starting/stopping.
+</p>
+
+<h2>
+Don't Rush Into Traffic
+</h2>
+
+<p>
+Learner-এর control এবং comfort তৈরি হওয়ার আগে busy traffic
+এ যাওয়ার প্রয়োজন নেই। Progression should be gradual.
+</p>
+
+<br>
+
+<a href="#booking" class="btn">
+Start Learning →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- BLOG ARTICLE 2 -->
+
+<section id="blog-mistakes" class="page">
+
+<div class="container inner-top">
+
+<span class="breadcrumb">
+Riding Tips / Beginner Guide
+</span>
+
+<h1>
+Common Beginner Riding Mistakes
+</h1>
+
+<p>
+Simple things that new riders should pay attention to.
+</p>
+
+</div>
+
+<div class="container detail-content">
+
+<h2>
+Looking Down Too Much
+</h2>
+
+<p>
+Rider should maintain awareness of the road and surroundings,
+rather than continuously looking at the front wheel.
+</p>
+
+<h2>
+Overusing The Accelerator
+</h2>
+
+<p>
+Smooth control is generally more useful than sudden acceleration.
+</p>
+
+<h2>
+Turning Too Fast
+</h2>
+
+<p>
+Turning requires controlled speed, awareness and practice.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- BLOG ARTICLE 3 -->
+
+<section id="blog-traffic" class="page">
+
+<div class="container inner-top">
+
+<span class="breadcrumb">
+Riding Tips / Road Safety
+</span>
+
+<h1>
+What To Practice Before Traffic?
+</h1>
+
+<p>
+Control comes before complexity.
+</p>
+
+</div>
+
+<div class="container detail-content">
+
+<ul>
+<li>Starting and stopping smoothly</li>
+<li>Brake control</li>
+<li>Turning</li>
+<li>Slow-speed balance</li>
+<li>Awareness of surroundings</li>
+<li>Basic road positioning</li>
+</ul>
+
+<p>
+Traffic practice should be progressive and based on
+the learner's readiness.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- BOOKING -->
+
+<section id="booking" class="page">
+
+<div class="container inner-top">
+
+<span class="breadcrumb">
+Home / Booking
+</span>
+
+<h1>
+Book Your Slot
+</h1>
+
+<p>
+Fill in the basic details and continue to WhatsApp.
+</p>
+
+</div>
+
+<div class="container">
+
+<form class="contact-form" id="bookingForm">
+
+<div class="form-grid">
+
+<div class="form-field">
+
+<label>
+Full Name
+</label>
+
+<input
+id="bookingName"
+required
+placeholder="Your name"
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Phone Number
+</label>
+
+<input
+id="bookingPhone"
+required
+type="tel"
+placeholder="10-digit number"
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Training
+</label>
+
+<select id="bookingCourse">
+
+<option>Basic Scooty Training</option>
+<option>Bike Training</option>
+<option>Advanced / Refresher</option>
+<option>Doorstep Training</option>
+
+</select>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Preferred Time
+</label>
+
+<input
+id="bookingTime"
+placeholder="Morning / Afternoon / Evening"
+>
+
+</div>
+
+
+<div class="form-field full">
+
+<label>
+Your Location
+</label>
+
+<input
+id="bookingLocation"
+placeholder="Area / locality"
+>
+
+</div>
+
+
+<div class="form-field full">
+
+<label>
+Message
+</label>
+
+<textarea
+id="bookingMessage"
+rows="5"
+placeholder="Anything we should know?"
+></textarea>
+
+</div>
+
+</div>
+
+<button class="btn btn-blue" type="submit">
+Send Booking Request →
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- YOUTUBE -->
+
+<section id="youtube" class="page">
+
+<div class="container inner-top">
+
+<span class="breadcrumb">
+Home / YouTube
+</span>
+
+<h1>
+YouTube
+</h1>
+
+<p>
+Documentaries, learner stories, Shorts and
+Two-Wheeler content.
+</p>
+
+</div>
+
+<div class="container">
+
+<div class="hero-video" style="position:relative;right:auto;top:auto;width:100%;max-width:850px;margin:auto">
+
+<div class="video-placeholder">
+<div>
+<strong>YOUTUBE CHANNEL</strong>
+Add your YouTube Channel and featured video
+from Admin Panel.
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     ADMIN
+========================================================= -->
+
+<section id="admin" class="page">
+
+<div class="container inner-top">
+
+<span class="breadcrumb">
+Internal / Admin
+</span>
+
+<h1>
+Zero Fear Admin Panel
+</h1>
+
+<p>
+Central configuration for content, media, social links,
+courses, hero videos and contact details.
+</p>
+
+</div>
+
+<div class="container">
+
+<div class="admin">
+
+<div class="admin-note">
+<strong>Production note:</strong>
+This single-file interface provides the Admin Panel structure.
+For permanent multi-user saving, authentication, database,
+image uploads, live Google Reviews and automatic WhatsApp
+notifications, connect these fields to a backend/CMS.
+</div>
+
+<div class="admin-grid">
+
+<div class="admin-nav">
+
+<button>Dashboard</button>
+<button>Hero Slides</button>
+<button>About Us</button>
+<button>Mission</button>
+<button>Journey</button>
+<button>Women Empowerment</button>
+<button>Why Choose</button>
+<button>Courses</button>
+<button>Gallery</button>
+<button>Reviews</button>
+<button>Social Media</button>
+<button>Blog</button>
+<button>FAQ</button>
+<button>Booking</button>
+<button>SEO</button>
+
+</div>
+
+
+<div class="admin-panel">
+
+<h2>
+Website Settings
+</h2>
+
+<br>
+
+<div class="admin-fields">
+
+
+<label>
+Brand Name
+<input value="ZERO FEAR">
+</label>
+
+
+<label>
+Tagline
+<input value="FEAR OUT. FREEDOM IN.">
+</label>
+
+
+<label>
+Primary Phone
+<input value="7980110273">
+</label>
+
+
+<label>
+Secondary Phone
+<input value="7980108587">
+</label>
+
+
+<label>
+Instagram URL
+<input value="https://www.instagram.com/kolkata_scooty_bike_training">
+</label>
+
+
+<label>
+Facebook URL
+<input value="https://www.facebook.com/freelancetwowheelertraining.co.in">
+</label>
+
+
+<label>
+Google Place ID
+<input value="ChIJKw-pMI1xAjoR2InlnVTKHeI">
+</label>
+
+
+<label>
+YouTube Channel URL
+<input placeholder="Paste YouTube Channel URL">
+</label>
+
+
+<label>
+Hero Video 01
+<input placeholder="YouTube URL / MP4 URL">
+</label>
+
+
+<label>
+Hero Video 02
+<input placeholder="YouTube URL / MP4 URL">
+</label>
+
+
+<label>
+About Us Image
+<input placeholder="Image path / media URL">
+</label>
+
+
+<label>
+Women Empowerment Image
+<input placeholder="Image path / media URL">
+</label>
+
+
+<label>
+Basic Scooty Image
+<input placeholder="Image path / media URL">
+</label>
+
+
+<label>
+Bike Training Image
+<input placeholder="Image path / media URL">
+</label>
+
+
+<label>
+Doorstep Image
+<input placeholder="Image path / media URL">
+</label>
+
+
+<label>
+Primary Colour
+<input value="#1557D6">
+</label>
+
+
+<label>
+Accent Colour
+<input value="#FFD522">
+</label>
+
+
+<label>
+Doorstep Radius
+<input value="10 KM">
+</label>
+
+
+<label>
+0–2 KM Fee
+<input value="4500">
+</label>
+
+
+<label>
+2–3 KM Fee
+<input value="5000">
+</label>
+
+
+<label>
+Maximum Doorstep Fee
+<input value="8000">
+</label>
+
+
+<label>
+Meta Title
+<input value="ZERO FEAR | Two-Wheeler Training Kolkata">
+</label>
+
+
+<label>
+Meta Description
+<input value="Beginner-first scooty and bike training in Kolkata.">
+</label>
+
+</div>
+
+<br>
+
+<button
+class="btn btn-blue"
+onclick="adminSave()"
+>
+Save Configuration
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<a href="#home" class="brand">
+ZERO <span>FEAR</span>
+<small>FEAR OUT. FREEDOM IN.</small>
+</a>
+
+<p class="footer-description">
+Learn. Experience. Ride.
+A new Two-Wheeler journey built around
+confidence and freedom.
+</p>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+Explore
+</div>
+
+<a href="#about-detail">
+About Us
+</a>
+
+<a href="#mission-detail">
+Our Mission
+</a>
+
+<a href="#journey-detail">
+Our Journey
+</a>
+
+<a href="#training-detail">
+Courses
+</a>
+
+<a href="#women-detail">
+Women Empowerment
+</a>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+Discover
+</div>
+
+<a href="#why">
+Why Zero Fear
+</a>
+
+<a href="#gallery">
+Gallery
+</a>
+
+<a href="#reviews-detail">
+Reviews
+</a>
+
+<a href="#blog-detail">
+Riding Tips
+</a>
+
+<a href="#faq-detail">
+FAQ
+</a>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+Connect
+</div>
+
+<a href="tel:+917980110273">
+7980110273
+</a>
+
+<a href="tel:+917980108587">
+7980108587
+</a>
+
+<a
+href="https://wa.me/917980110273"
+target="_blank"
+>
+WhatsApp
+</a>
+
+<a
+href="https://www.instagram.com/kolkata_scooty_bike_training"
+target="_blank"
+>
+Instagram
+</a>
+
+<a
+href="https://www.facebook.com/freelancetwowheelertraining.co.in"
+target="_blank"
+>
+Facebook
+</a>
+
+
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 ZERO FEAR. All rights reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- MOBILE CTA -->
+
+<div class="mobile-bar">
+
+<a
+class="mobile-call"
+href="tel:+917980110273"
+>
+Call
+</a>
+
+<a
+class="mobile-wa"
+href="https://wa.me/917980110273"
+target="_blank"
+>
+WhatsApp
+</a>
+
+<a
+class="mobile-book"
+href="#booking"
+>
+Book Slot
+</a>
+
+</div>
+
+
+<script>
+/* =========================================================
+   ZERO FEAR JAVASCRIPT
+========================================================= */
+
+
+/* =========================================================
+   PAGE ROUTING
+========================================================= */
+
+const pageIds = [
+  "home","about-detail","mission-detail","training-detail","course-scooty","course-bike","course-advanced",
+  "doorstep-detail","journey-detail","women-detail","experience-detail","stories-detail","instagram-detail","facebook-detail",
+  "branch-detail","gallery-detail","reviews-detail","faq-detail","blog-detail","blog-cycle","blog-mistakes","blog-traffic",
+  "booking","contact-detail","youtube"
+];
+
+function routePage(){
+
+  let hash = location.hash.replace("#","");
+
+  if(!hash){
+    hash = "home";
+  }
+
+  const allPages =
+    document.querySelectorAll(".page");
+
+  allPages.forEach(page=>{
+    page.classList.remove("active");
+  });
+
+  const target =
+    document.getElementById(hash);
+
+  if(hash === "admin") hash = "home";
+
+  if(target && pageIds.includes(hash)){
+    target.classList.add("active");
+  }else{
+    document.getElementById("home")
+      .classList.add("active");
+  }
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+  if(window.innerWidth <= 950){
+    document
+      .getElementById("navLinks")
+      .classList.remove("open");
+  }
+}
+
+window.addEventListener(
+  "hashchange",
+  routePage
+);
+
+routePage();
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuBtn =
+  document.getElementById("menuBtn");
+
+const navLinks =
+  document.getElementById("navLinks");
+
+menuBtn.addEventListener(
+  "click",
+  ()=>{
+    navLinks.classList.toggle("open");
+  }
+);
+
+
+/* =========================================================
+   HERO SLIDER
+========================================================= */
+
+const heroSlides =
+  [...document.querySelectorAll(".hero-slide")];
+
+const heroDots =
+  document.getElementById("heroDots");
+
+let heroIndex = 0;
+
+heroSlides.forEach((slide,index)=>{
+
+  const dot =
+    document.createElement("button");
+
+  dot.className="hero-dot";
+
+  dot.addEventListener(
+    "click",
+    ()=>{
+      showHero(index);
+    }
+  );
+
+  heroDots.appendChild(dot);
+
+});
+
+function showHero(index){
+
+  heroIndex=index;
+
+  heroSlides.forEach(
+    (slide,i)=>{
+      slide.classList.toggle(
+        "active",
+        i===index
+      );
+    }
+  );
+
+  [...heroDots.children].forEach(
+    (dot,i)=>{
+      dot.classList.toggle(
+        "active",
+        i===index
+      );
+    }
+  );
+}
+
+showHero(0);
+
+setInterval(
+  ()=>{
+    showHero(
+      (heroIndex+1) %
+      heroSlides.length
+    );
+  },
+  6500
+);
+
+
+/* =========================================================
+   AI CHALLENGE
+========================================================= */
+
+const quizData = [
+
+  {
+    question:"আপনি কি cycle চালাতে পারেন?",
+    english:"Can you ride a bicycle?",
+    options:[
+      "হ্যাঁ / Yes",
+      "না / No"
+    ]
+  },
+
+  {
+    question:"আগে কি two-wheeler চালিয়েছেন?",
+    english:"Have you ridden a two-wheeler before?",
+    options:[
+      "হ্যাঁ / Yes",
+      "না / No"
+    ]
+  },
+
+  {
+    question:"Traffic-এ আপনার confidence কেমন?",
+    english:"How confident are you in traffic?",
+    options:[
+      "ভালো / Good",
+      "মাঝারি / Average",
+      "ভয় লাগে / Nervous"
+    ]
+  },
+
+  {
+    question:"Turning করতে কেমন লাগে?",
+    english:"How confident are you with turning?",
+    options:[
+      "ভালো / Good",
+      "কিছুটা / A little",
+      "এখনও confidence নেই / Not yet"
+    ]
+  },
+
+  {
+    question:"আগে riding training নিয়েছেন?",
+    english:"Have you taken riding training before?",
+    options:[
+      "হ্যাঁ / Yes",
+      "না / No"
+    ]
+  }
+
+];
+
+let quizStep=0;
+let quizScore=0;
+
+const quiz =
+  document.getElementById("quiz");
+
+function renderQuiz(){
+
+  const q =
+    quizData[quizStep];
+
+  quiz.innerHTML=`
+
+    <div class="progress">
+
+      <span style="
+        width:${
+          ((quizStep+1) /
+          quizData.length)*100
+        }%
+      "></span>
+
+    </div>
+
+    <h3>
+      ${q.question}
+      <small>
+        ${q.english}
+      </small>
+    </h3>
+
+    <div class="quiz-options">
+
+      ${q.options.map(
+        (option,index)=>`
+
+          <button
+            onclick="answerQuiz(${index})"
+          >
+            ${option}
+          </button>
+
+        `
+      ).join("")}
+
+    </div>
+
+    <div class="quiz-count">
+      Question ${quizStep+1}
+      of ${quizData.length}
+    </div>
+
+  `;
+}
+
+function answerQuiz(index){
+
+  /*
+    This challenge is an orientation tool,
+    not a validated riding-safety assessment.
+  */
+
+  quizScore +=
+    index===0 ? 2 : 1;
+
+  quizStep++;
+
+  if(
+    quizStep <
+    quizData.length
+  ){
+
+    renderQuiz();
+    return;
+
+  }
+
+  const raw =
+    (quizScore /
+    (quizData.length*2))
+    *10;
+
+  /*
+    Friendly positive range requested for
+    the Zero Fear challenge.
+  */
+
+  const finalScore =
+    Math.min(
+      10,
+      Math.max(
+        8,
+        Math.round(raw*10)/10
+      )
+    );
+
+  quiz.innerHTML=`
+
+    <div class="quiz-result">
+
+      <div class="score">
+        ${finalScore.toFixed(1)}
+      </div>
+
+      <h3>
+        You're Ready To Start!
+      </h3>
+
+      <p style="
+        color:#68778D;
+        font-size:13px;
+        margin:10px 0 18px;
+      ">
+        This is a friendly starting-point
+        indicator — not a riding certification.
+      </p>
+
+      <a
+        href="#training-detail"
+        class="btn btn-blue"
+      >
+        Explore Courses →
+      </a>
+
+    </div>
+
+  `;
+}
+
+renderQuiz();
+
+
+/* =========================================================
+   DOORSTEP CALCULATOR
+========================================================= */
+
+const distanceInput =
+  document.getElementById(
+    "distanceInput"
+  );
+
+const distanceFee =
+  document.getElementById(
+    "distanceFee"
+  );
+
+const distanceRange =
+  document.getElementById(
+    "distanceRange"
+  );
+
+if(distanceInput){
+
+  distanceInput.addEventListener(
+    "input",
+    ()=>{
+      let km =
+        parseFloat(
+          distanceInput.value
+        );
+
+      if(isNaN(km)){
+        km=0;
+      }
+
+      km =
+        Math.max(
+          0,
+          Math.min(
+            10,
+            km
+          )
+        );
+
+      let fee=4500;
+      let range="0–2 KM";
+
+      if(km > 2 && km <= 3){
+
+        fee=5000;
+        range="2–3 KM";
+
+      }
+
+      if(km > 3){
+
+        fee =
+          Math.round(
+            5000 +
+            ((km-3)/7)*3000
+          );
+
+        range="3–10 KM";
+
+      }
+
+      distanceFee.textContent =
+        "₹"+
+        fee.toLocaleString(
+          "en-IN"
+        );
+
+      distanceRange.textContent =
+        range;
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   GALLERY FILTER
+========================================================= */
+
+const filters =
+  document.querySelectorAll(
+    ".filter"
+  );
+
+const galleryItems =
+  document.querySelectorAll(
+    ".gallery-item"
+  );
+
+filters.forEach(filter=>{
+
+  filter.addEventListener(
+    "click",
+    ()=>{
+
+      filters.forEach(
+        f=>f.classList.remove(
+          "active"
+        )
+      );
+
+      filter.classList.add(
+        "active"
+      );
+
+      const selected =
+        filter.dataset.filter;
+
+      galleryItems.forEach(item=>{
+
+        if(
+          selected==="all" ||
+          item.dataset.category===selected
+        ){
+
+          item.style.display="block";
+
+        }else{
+
+          item.style.display="none";
+
+        }
+
+      });
+
+    }
+  );
+
+});
+
+
+/* =========================================================
+   CONTACT → WHATSAPP
+========================================================= */
+
+const contactForm =
+  document.getElementById(
+    "contactForm"
+  );
+
+contactForm.addEventListener(
+  "submit",
+  function(e){
+
+    e.preventDefault();
+
+    const name =
+      document.getElementById(
+        "contactName"
+      ).value;
+
+    const phone =
+      document.getElementById(
+        "contactPhone"
+      ).value;
+
+    const course =
+      document.getElementById(
+        "contactCourse"
+      ).value;
+
+    const time =
+      document.getElementById(
+        "contactTime"
+      ).value;
+
+    const message =
+      document.getElementById(
+        "contactMessage"
+      ).value;
+
+    const text =
+
+`ZERO FEAR ENQUIRY
+
+Name: ${name}
+
+Phone: ${phone}
+
+Interested In: ${course}
+
+Preferred Time: ${time}
+
+Message: ${message}`;
+
+    const url =
+      "https://wa.me/917980110273?text="+
+      encodeURIComponent(text);
+
+    window.open(
+      url,
+      "_blank"
+    );
+
+  }
+);
+
+
+/* =========================================================
+   BOOKING → WHATSAPP
+========================================================= */
+
+const bookingForm =
+  document.getElementById(
+    "bookingForm"
+  );
+
+bookingForm.addEventListener(
+  "submit",
+  function(e){
+
+    e.preventDefault();
+
+    const name =
+      document.getElementById(
+        "bookingName"
+      ).value;
+
+    const phone =
+      document.getElementById(
+        "bookingPhone"
+      ).value;
+
+    const course =
+      document.getElementById(
+        "bookingCourse"
+      ).value;
+
+    const time =
+      document.getElementById(
+        "bookingTime"
+      ).value;
+
+    const location =
+      document.getElementById(
+        "bookingLocation"
+      ).value;
+
+    const message =
+      document.getElementById(
+        "bookingMessage"
+      ).value;
+
+    const text =
+
+`ZERO FEAR BOOKING REQUEST
+
+Name: ${name}
+
+Phone: ${phone}
+
+Training: ${course}
+
+Preferred Time: ${time}
+
+Location: ${location}
+
+Message: ${message}`;
+
+    const url =
+      "https://wa.me/917980110273?text="+
+      encodeURIComponent(text);
+
+    window.open(
+      url,
+      "_blank"
+    );
+
+  }
+);
+
+
+/* =========================================================
+   ADMIN DEMO SAVE
+========================================================= */
+
+function adminSave(){
+
+  alert(
+    "Configuration interface ready. For permanent saving, connect this Admin Panel to your production database/CMS."
+  );
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealTargets =
+  document.querySelectorAll(
+    ".why-item,.course-card,.journey-card,.mission-mini,.social-card,.blog-card"
+  );
+
+const revealObserver =
+  new IntersectionObserver(
+    entries=>{
+
+      entries.forEach(
+        entry=>{
+
+          if(entry.isIntersecting){
+
+            entry.target.style.opacity="1";
+            entry.target.style.transform="translateY(0)";
+
+          }
+
+        }
+      );
+
+    },
+    {
+      threshold:.12
+    }
+  );
+
+revealTargets.forEach(
+  element=>{
+
+    element.style.opacity="0";
+    element.style.transform="translateY(18px)";
+    element.style.transition=
+      "opacity .55s ease, transform .55s ease";
+
+    revealObserver.observe(
+      element
+    );
+
+  }
+);
+
+</script>
+
+
+<script id="zero-fear-v3">
+(function(){
+  const clean = (root=document)=>{
+    root.querySelectorAll('.media-placeholder').forEach(el=>{
+      const t=(el.textContent||'').trim();
+      if(/Admin Panel|Upload from Admin|REAL ZERO|REAL WOMEN|REAL SCOOTY|REAL BIKE|REAL ROAD|REAL SUCCESS|REAL TRAINING/i.test(t)){
+        el.setAttribute('aria-label','Zero Fear media area');
+      }
+    });
+  };
+
+  // Make the mobile menu feel cleaner.
+  const menu = document.getElementById('menuBtn');
+  if(menu){
+    menu.setAttribute('aria-label','Open navigation');
+  }
+
+  // Replace the long mission mini stack with a compact visual sequence label.
+  const missionSide=document.querySelector('#mission .mission-side');
+  if(missionSide){
+    missionSide.setAttribute('aria-label','Learn, Practice, Experience, Freedom');
+  }
+
+  // Remove accidental empty spacer blocks that create the blank vertical area
+  // visible in the old mobile mission screenshot.
+  document.querySelectorAll('#mission br').forEach(el=>{
+    if(el.parentElement && el.parentElement.classList.contains('mission-main')) el.remove();
+  });
+
+  // Keep public navigation away from the internal admin page.
+  document.querySelectorAll('a[href="#admin"]').forEach(a=>a.remove());
+
+  clean();
+})();
+</script>
+
+
+<script id="zero-fear-v4-pages">
+(function(){
+  const d=document.getElementById('v4Distance'), out=document.getElementById('v4Fee');
+  if(d&&out){d.addEventListener('input',function(){const x=parseFloat(this.value);if(!Number.isFinite(x)||x<0){out.textContent='Enter a distance to see the applicable fee range.';return;} if(x<=2)out.textContent='Applicable fee: ₹4,500'; else if(x<=3)out.textContent='Applicable fee: ₹5,000'; else if(x<=10)out.textContent='Applicable fee: distance-based, up to ₹8,000'; else out.textContent='Doorstep training is currently described as up to 10 KM from Netaji Metro / Kudghat.';});}
+})();
+</script>
+</body>
+</html>
